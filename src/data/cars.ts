@@ -5,99 +5,128 @@ export interface CarData {
   price: string;
   seat: number;
   transmission: "AT" | "MT";
-  features: string;
+  features: string[];
+  year: number;
+  category:
+    | "Sedan"
+    | "SUV"
+    | "MPV"
+    | "Hatchback"
+    | "Minibus"
+    | "Pickup"
+    | "Luxury";
 }
 
 const cars: CarData[] = [
   {
     id: 1,
     name: "Avanza New",
-    image: "https://www.pngmart.com/files/22/Toyota-Avanza-PNG.png",
+    image: "/src/assets/images/avanza-new.png",
     price: "Rp 450.000 / hari",
     seat: 7,
     transmission: "AT",
-    features: "AC dingin, Audio, Bisa lepas kunci / driver",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2023,
+    category: "MPV",
   },
   {
     id: 2,
     name: "Innova Reborn",
-    image: "https://www.pngmart.com/files/22/Toyota-Innova-PNG.png",
+    image: "/src/assets/images/innova-reborn.jpg",
     price: "Rp 700.000 / hari",
     seat: 7,
     transmission: "AT",
-    features: "AC dingin, Kabin luas, Bisa driver",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2023,
+    category: "MPV",
   },
   {
     id: 3,
     name: "Innova Zenix G Hybrid",
-    image: "https://www.pngmart.com/files/23/Toyota-Innova-Zenix-PNG.png",
+    image: "/src/assets/images/innova-zenix-g.jpeg",
     price: "Rp 850.000 / hari",
     seat: 7,
     transmission: "AT",
-    features: "Hybrid, AC dingin, Audio premium, Driver only",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2023,
+    category: "MPV",
   },
   {
     id: 4,
     name: "Pajero",
-    image: "https://www.pngmart.com/files/22/Mitsubishi-Pajero-PNG.png",
+    image: "/src/assets/images/pajero.jpg",
     price: "Rp 1.200.000 / hari",
     seat: 7,
     transmission: "AT",
-    features: "SUV premium, AC dingin, Driver only",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2022,
+    category: "SUV",
   },
   {
     id: 5,
     name: "Fortuner",
-    image: "https://www.pngmart.com/files/8/Toyota-Fortuner-PNG-Clipart.png",
+    image: "/src/assets/images/fortuner.jpg",
     price: "Rp 1.300.000 / hari",
     seat: 7,
     transmission: "AT",
-    features: "SUV premium, AC dingin, Driver only",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2022,
+    category: "SUV",
   },
   {
     id: 6,
     name: "Brio",
-    image: "https://www.pngmart.com/files/22/Honda-Brio-PNG-Isolated-HD.png",
+    image: "/src/assets/images/brio.png",
     price: "Rp 350.000 / hari",
     seat: 5,
     transmission: "AT",
-    features: "Irit, AC dingin, Bisa lepas kunci",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2023,
+    category: "Hatchback",
   },
   {
     id: 7,
     name: "Alphard Gen 3",
-    image: "https://www.pngmart.com/files/23/Toyota-Alphard-PNG.png",
+    image: "/src/assets/images/alphard-gen-3.png",
     price: "Rp 2.000.000 / hari",
     seat: 7,
     transmission: "AT",
-    features: "Mobil mewah, AC dingin, Driver only",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2023,
+    category: "Luxury",
   },
   {
     id: 8,
     name: "Hiace Commuter",
-    image: "https://www.pngmart.com/files/23/Toyota-Hiace-PNG.png",
+    image: "/src/assets/images/hiace-commuter.jpg",
     price: "Rp 1.000.000 / hari",
     seat: 15,
     transmission: "MT",
-    features: "Mobil pariwisata, AC dingin, Driver only",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2022,
+    category: "Minibus",
   },
   {
     id: 9,
     name: "Hiace Premio",
-    image: "https://www.pngmart.com/files/23/Toyota-Hiace-Premio-PNG.png",
+    image: "/src/assets/images/hiace-premio.png",
     price: "Rp 1.300.000 / hari",
     seat: 12,
     transmission: "AT",
-    features: "Premium seat, AC dingin, Driver only",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2023,
+    category: "Minibus",
   },
   {
     id: 10,
     name: "Hilux",
-    image: "https://www.pngmart.com/files/22/Toyota-Hilux-PNG-Isolated-HD.png",
+    image: "/src/assets/images/hiluxx.png",
     price: "Rp 700.000 / hari",
     seat: 5,
     transmission: "MT",
-    features: "Angkut barang, AC dingin, Bisa driver",
+    features: ["AC dingin", "Lepas kunci / Driver"],
+    year: 2022,
+    category: "Pickup",
   },
 ];
 
