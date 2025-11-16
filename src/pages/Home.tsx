@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="pt-4">
+    <div className="font-inter pt-4">
       <h1 className="text-3xl font-bold text-gray-900">
         Selamat Datang di <span className="text-yellow-400">BJB Rentcar</span>
       </h1>
@@ -11,7 +11,7 @@ export default function Home() {
 
       <a
         href="/cars"
-        className="inline-block mt-6 bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-lg shadow-md font-semibold"
+        className="inline-block mt-6 -10 bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-lg shadow-md font-semibold"
       >
         Lihat Daftar Mobil
       </a>
