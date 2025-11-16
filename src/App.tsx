@@ -10,7 +10,7 @@ export default function App() {
     <div className="bg-white min-h-screen text-gray-800">
       <Navbar />
 
-      <main className="pt-20 max-w-6xl mx-auto px-4">
+      <main className="pt-10 max-w-6xl mx-auto px-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
