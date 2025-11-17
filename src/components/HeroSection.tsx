@@ -5,7 +5,7 @@ const HeroSection: React.FC = () => {
   return (
     // Kontainer utama dengan posisi relative untuk menampung elemen absolut
     // dan overflow-hidden untuk memotong lingkaran latar belakang
-    <div className="relative w-full pt-10 bg-gradient-to-b from-white to-gray-100   py-20 md:py-30 md:pt-20 overflow-hidden font-outfit ">
+    <div className="relative w-full pt-10 bg-gradient-to-b from-white to-gray-100   py-20 md:py-30 md:pt-2 overflow-hidden font-outfit ">
       {/* 1. Elemen Latar Belakang (Lingkaran Putih) */}
       <div
         className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 
@@ -28,15 +28,16 @@ const HeroSection: React.FC = () => {
 
           {/* Judul Utama (Headline) */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 my-1 leading-tight">
-            Find Affordable Dream Cars for Rental
+            Temukan Mobil Impian dengan Harga Terjangkau
           </h1>
 
           {/* Paragraf Deskripsi */}
-          <p className=" text-gray-600 text-lg mb-4">
-            Fulfill your automotive fantasies without breaking the bank. Check
-            our affordable car rentals for an opulent yet economical ride.
+          <p className="text-gray-600 text-lg mb-4">
+            Nikmati perjalanan nyaman dan menyenangkan tanpa menguras budget.
+            Kami menyediakan berbagai pilihan mobil rental dengan kualitas
+            terbaik, harga bersahabat, dan proses mudah untuk kebutuhan harian
+            maupun perjalanan luar kota.
           </p>
-
           {/* Tombol CTA */}
           <button
             className="bg-yellow-500 text-white font-bold py-3 px-8 rounded-xl

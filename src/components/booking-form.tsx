@@ -79,44 +79,29 @@ const App: React.FC<BookingFormProps> = () => {
 
   // Render komponen
   return (
-    // 1. Container Induk/Jangkar:
-    // - 'relative' agar 'absolute' child berfungsi.
-    // - 'w-full' agar di mobile dia 100% penuh.
-    // - 'min-h-[20vh]' hanya untuk memberi ruang agar tidak 'collapse'.
-    <div className="relative w-full h-[35rem] sm:h-[22rem] md:h-[12rem] lg:h-[10rem]">
-      {/* 2. Kartu Form (Absolute):
-        Ini adalah bagian yang diperbaiki.
-        - 'absolute z-10': Mengambang di atas.
-        - 'top-0 md:-top-10 lg:-top-20': Efek "pull-up" responsif.
-        
-        - Mobile (Default):
-        - 'left-4 right-4': "Jepit" kartu 1rem (16px) dari tepi kiri dan kanan.
-                          Ini otomatis membuatnya full-width DENGAN padding.
-        
-        - Tablet & Desktop (md: breakpoint):
-        - 'md:left-1/2 md:-translate-x-1/2': Pusatkan kartu secara horizontal.
-        - 'md:w-full md:max-w-5xl': Set lebar maks di 5xl.
-      */}
+    // Kita bungkus dengan React.Fragment (<>) untuk menambahkan <style>
+    <>
+      {/* CSS untuk menyembunyikan icon kalender bawaan browser */}
+      <style>{`
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          display: none;
+          -webkit-appearance: none;
+        }
+      `}</style>
+
       <div
         className="
-          absolute z-10
-          top-10 md:-top-10 lg:-top-20 
-          
-          left-4 right-4 /* <- Ini untuk Mobile (full-width - 32px) */
-          
-          md:left-1/2 md:-translate-x-1/2  /* <- Ini untuk centering Desktop */
-          md:w-full md:max-w-5xl          /* <- Ini untuk lebar Desktop */
-          
-          bg-white px-10 md:p-10 rounded-xl shadow-none md:shadow-sm 
+          relative z-10
+          w-auto 
+          mx-4 
+          md:mx-auto md:max-w-5xl
+          mt-0 md:-mt-10 lg:-mt-20
+          bg-white p-6 md:p-12 rounded-xl shadow-none md:shadow-lg
         "
       >
-        {/* Kontainer Form */}
+        {/* PERBAIKAN: Menambahkan tag <form> yang hilang */}
         <form onSubmit={handleSubmit}>
-          {/* 3. Grid Responsif:
-            - 'grid-cols-1': Mobile (semua bertumpuk)
-            - 'sm:grid-cols-2': Tablet Kecil (2 kolom)
-            - 'md:grid-cols-5': Desktop (5 kolom)
-          */}
+          {/* Kontainer Form */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-6">
             {/* Input Nama */}
             <div className="w-full">
@@ -146,16 +131,35 @@ const App: React.FC<BookingFormProps> = () => {
               >
                 Pickup Date <span className="text-red-500">*</span>
               </label>
-              <input
-                type="date"
-                id="pickupDate"
-                value={pickupDate}
-                onChange={handlePickupDateChange}
-                min={today} // Validasi: Tidak bisa tanggal kemarin
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
-                           focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-                required
-              />
+              {/* 1. Wrapper relatif untuk menampung icon */}
+              <div className="relative">
+                <input
+                  type="date"
+                  id="pickupDate"
+                  value={pickupDate}
+                  onChange={handlePickupDateChange}
+                  min={today} // Validasi: Tidak bisa tanggal kemarin
+                  // 2. Tambahkan 'pr-10' (padding kanan) untuk memberi ruang bagi icon
+                  className="block w-full px-3 py-2 pr-10 border border-gray-300 rounded-md shadow-sm 
+                             focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+                  required
+                />
+                {/* 3. Icon Kalender */}
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <svg
+                    className="h-5 w-5 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5v1h8V7H6z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
 
             {/* Input Tanggal Dropoff */}
@@ -166,20 +170,41 @@ const App: React.FC<BookingFormProps> = () => {
               >
                 Dropoff Date <span className="text-red-500">*</span>
               </label>
-              <input
-                type="date"
-                id="dropoffDate"
-                value={dropoffDate}
-                onChange={(e) => setDropoffDate(e.target.value)}
-                min={pickupDate || today} // Validasi: Tidak bisa sebelum tanggal pickup
-                disabled={!pickupDate} // Disable jika tanggal pickup belum dipilih
-                className={`block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
-                           focus:outline-none focus:ring-yellow-500 focus:border-yellow-500
-                           ${
-                             !pickupDate ? "bg-gray-100 cursor-not-allowed" : ""
-                           }`}
-                required
-              />
+              {/* 1. Wrapper relatif untuk menampung icon */}
+              <div className="relative">
+                <input
+                  type="date"
+                  id="dropoffDate"
+                  value={dropoffDate}
+                  onChange={(e) => setDropoffDate(e.target.value)}
+                  min={pickupDate || today} // Validasi: Tidak bisa sebelum tanggal pickup
+                  disabled={!pickupDate} // Disable jika tanggal pickup belum dipilih
+                  // 2. Tambahkan 'pr-10' (padding kanan)
+                  className={`block w-full px-3 py-2 pr-10 border border-gray-300 rounded-md shadow-sm 
+                             focus:outline-none focus:ring-yellow-500 focus:border-yellow-500
+                             ${
+                               !pickupDate
+                                 ? "bg-gray-100 cursor-not-allowed"
+                                 : ""
+                             }`}
+                  required
+                />
+                {/* 3. Icon Kalender */}
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <svg
+                    className="h-5 w-5 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5v1h8V7H6z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
 
             {/* Select Tipe Mobil */}
@@ -190,27 +215,43 @@ const App: React.FC<BookingFormProps> = () => {
               >
                 Car Type <span className="text-red-500">*</span>
               </label>
-              <select
-                id="carType"
-                value={carType}
-                onChange={(e) => setCarType(e.target.value)}
-                className="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm 
-                           focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-                required
-              >
-                {carTypes.map((car) => (
-                  <option key={car} value={car}>
-                    {car}
-                  </option>
-                ))}
-              </select>
+              {/* 1. Wrapper relatif untuk menampung icon panah */}
+              <div className="relative">
+                <select
+                  id="carType"
+                  value={carType}
+                  onChange={(e) => setCarType(e.target.value)}
+                  // 2. Tambahkan 'appearance-none' (sembunyikan panah default) dan 'pr-10' (ruang icon)
+                  className="block w-full px-3 py-2 pr-10 border border-gray-300 bg-white rounded-md shadow-sm 
+                             appearance-none focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+                  required
+                >
+                  {/* PERBAIKAN: Mengembalikan mapping options yang benar */}
+                  {carTypes.map((car) => (
+                    <option key={car} value={car}>
+                      {car}
+                    </option>
+                  ))}
+                </select>
+                {/* 3. Icon Panah (Chevron) Kustom */}
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <svg
+                    className="h-5 w-5 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
 
-            {/* 4. Grid Cerdas untuk item ke-5:
-              - 'sm:col-span-2': Di layout 2-kolom (tablet kecil), buat item ini
-                                mengambil 2 kolom (satu baris penuh).
-              - 'md:col-span-1': Di layout 5-kolom (desktop), kembalikan ke 1 kolom.
-            */}
+            {/* 4. Grid Cerdas untuk item ke-5 (sudah benar) */}
             <div className="w-full sm:col-span-2 md:col-span-1">
               <label
                 htmlFor="service"
@@ -218,20 +259,40 @@ const App: React.FC<BookingFormProps> = () => {
               >
                 Service <span className="text-red-500">*</span>
               </label>
-              <select
-                id="service"
-                value={service}
-                onChange={(e) => setService(e.target.value)}
-                className="block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm 
-                           focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-                required
-              >
-                {serviceOptions.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
+              {/* 1. Wrapper relatif untuk menampung icon panah */}
+              <div className="relative">
+                <select
+                  id="service"
+                  value={service}
+                  onChange={(e) => setService(e.target.value)}
+                  // 2. Tambahkan 'appearance-none' (sembunyikan panah default) dan 'pr-10' (ruang icon)
+                  className="block w-full px-3 py-2 pr-10 border border-gray-300 bg-white rounded-md shadow-sm 
+                             appearance-none focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+                  required
+                >
+                  {/* PERBAIKAN: Mengembalikan mapping options yang benar */}
+                  {serviceOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+                {/* 3. Icon Panah (Chevron) Kustom */}
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <svg
+                    className="h-5 w-5 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -244,15 +305,30 @@ const App: React.FC<BookingFormProps> = () => {
           <button
             type="submit"
             className="w-full bg-yellow-500 text-white font-bold uppercase tracking-wider 
-                       py-3 px-6 rounded-lg shadow-md
-                       hover:bg-yellow-600 focus:outline-none focus:ring-2 
-                       focus:ring-yellow-500 focus:ring-opacity-50 transition duration-200"
+             py-3 px-6 rounded-lg shadow-md
+             hover:bg-yellow-600 focus:outline-none focus:ring-2 
+             focus:ring-yellow-500 focus:ring-opacity-50 transition duration-200
+             flex items-center justify-center gap-2"
           >
             Booking
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </button>
         </form>
+        {/* PERBAIKAN: Tag penutup </form> dipindah ke sini */}
       </div>
-    </div>
+    </>
   );
 };
 

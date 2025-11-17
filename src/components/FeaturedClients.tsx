@@ -108,7 +108,7 @@ const FeaturedClients: React.FC = () => {
           </h1>
           <p className="text-center font-inter font-medium text-gray-700 uppercase leading-relaxed">
             LEBIH DARI 20+ PERUSAHAAN DI INDONESIA TELAH MENGGUNAKAN
-            <span className="font-bold">BJB RENTAL MOBIL PALEMBANG</span>{" "}
+            <span className="font-bold"> BJB RENTAL MOBIL PALEMBANG</span>{" "}
             SEBAGAI JASA SEWA MOBIL PALEMBANG TERPERCAYA
           </p>
           {/* Container Viewport:

@@ -1,6 +1,7 @@
 import App from "../components/booking-form";
 import FeaturedClients from "../components/FeaturedClients";
 import HeroSection from "../components/HeroSection";
+import Whyuseus from "../components/why-use-us";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <App />
       <FeaturedClients />
+      <Whyuseus />
     </div>
   );
 }
