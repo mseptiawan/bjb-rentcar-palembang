@@ -87,9 +87,9 @@ export default function CarCard({ car }: { car: CarData }) {
   )}`;
 
   return (
-    <div className="bg-white border border-gray-100 p-3 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+    <div className="bg-white  border-gray-100   rounded-2xl border-2 transition duration-300">
       {/* Container Gambar */}
-      <div className="overflow-hidden rounded-xl h-44 relative">
+      <div className="overflow-hidden h-44 rounded-t-2xl ">
         <img
           src={car.image}
           alt={car.name}
@@ -97,7 +97,7 @@ export default function CarCard({ car }: { car: CarData }) {
         />
       </div>
 
-      <div className="p-1">
+      <div className="p-3">
         {/* Nama Mobil */}
         <h3 className="font-outfit text-xl font-bold text-gray-900 mt-3">
           {car.name}
@@ -107,7 +107,7 @@ export default function CarCard({ car }: { car: CarData }) {
         <p className="font-inter text-sm font-medium text-yellow-500 mt-0.5">
           {car.category}
         </p>
-
+        <hr className="border-gray-300 my-4 mx-auto " />
         {/* Detail Ikon (Tahun, Seat, Transmisi, Fitur) */}
         <div className="grid grid-cols-2 gap-2 py-4 border-b border-gray-100 mt-2">
           <div className="flex items-center space-x-1.5 text-sm text-gray-700">
@@ -134,9 +134,9 @@ export default function CarCard({ car }: { car: CarData }) {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-full text-sm font-semibold transition duration-200 shadow-md"
+            className="flex items-center justify-center w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-xl text-sm font-semibold transition duration-200 shadow-md"
           >
-            Booking Sekarang
+            BOOKING SEKARANG
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-4 h-4 ml-1"

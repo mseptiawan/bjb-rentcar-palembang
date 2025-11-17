@@ -81,7 +81,7 @@ export default function Navbar() {
   // --- NAVBAR ATAS (DESKTOP) ---
   return (
     <>
-      <nav className="font-outfit fixed top-0 left-0 w-full bg-white shadow z-50">
+      <nav className="font-outfit fixed top-0 left-0 w-full bg-white shadow z-50 border-b-2 border-yellow-500">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link
             to="/"

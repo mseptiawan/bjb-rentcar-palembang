@@ -7,10 +7,10 @@ import Cars from "./pages/Cars";
 
 export default function App() {
   return (
-    <div className="bg-white min-h-screen text-gray-800">
+    <div className="min-h-screen text-gray-800">
       <Navbar />
 
-      <main className="pt-10 max-w-6xl mx-auto px-4">
+      <main className="  ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

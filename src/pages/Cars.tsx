@@ -41,8 +41,8 @@ export default function Cars() {
   // --- AKHIR LOGIKA PAGINASI ---
 
   return (
-    <div className="font-outfit">
-      <h1 className="text-3xl text-center  font-semibold text-gray-900 mb-6">
+    <div className="font-outfit max-w-6xl mx-auto">
+      <h1 className="text-3xl text-center  py-10 font-semibold text-gray-900 mb-6">
         Pilihan Armada di BJB Rentcar Palembang
       </h1>
 
