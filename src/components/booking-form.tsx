@@ -83,7 +83,7 @@ const App: React.FC<BookingFormProps> = () => {
     // - 'relative' agar 'absolute' child berfungsi.
     // - 'w-full' agar di mobile dia 100% penuh.
     // - 'min-h-[20vh]' hanya untuk memberi ruang agar tidak 'collapse'.
-    <div className="relative w-full min-h-[20vh]">
+    <div className="relative w-full min-h-[20vh] !p-20">
       {/* 2. Kartu Form (Absolute):
         Ini adalah bagian yang diperbaiki.
         - 'absolute z-10': Mengambang di atas.
@@ -100,14 +100,14 @@ const App: React.FC<BookingFormProps> = () => {
       <div
         className="
           absolute z-10
-          top-0 md:-top-10 lg:-top-20
+          top-10 md:-top-10 lg:-top-20 
           
           left-4 right-4 /* <- Ini untuk Mobile (full-width - 32px) */
           
-          md:left-1/2 md:-translate-x-1/2 /* <- Ini untuk centering Desktop */
+          md:left-1/2 md:-translate-x-1/2  /* <- Ini untuk centering Desktop */
           md:w-full md:max-w-5xl          /* <- Ini untuk lebar Desktop */
           
-          bg-white p-6 md:p-8 rounded-xl shadow-lg
+          bg-white p-10 md:p-10 rounded-xl shadow-none md:shadow-xl 
         "
       >
         {/* Kontainer Form */}
@@ -243,7 +243,7 @@ const App: React.FC<BookingFormProps> = () => {
           {/* Tombol Booking */}
           <button
             type="submit"
-            className="w-full bg-yellow-500 text-black font-bold uppercase tracking-wider 
+            className="w-full bg-yellow-500 text-white font-bold uppercase tracking-wider 
                        py-3 px-6 rounded-lg shadow-md
                        hover:bg-yellow-600 focus:outline-none focus:ring-2 
                        focus:ring-yellow-500 focus:ring-opacity-50 transition duration-200"
