@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-sm md:text-xl py-4">
+        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-sm md:text-lg py-4">
           © {new Date().getFullYear()} BJB Rental Mobil Palembang. All rights
           reserved.
         </div>

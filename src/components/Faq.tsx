@@ -59,6 +59,11 @@ const faqData: FaqItem[] = [
       "Ya. Jika terjadi kerusakan atau kecelakaan, mobil pengganti akan disediakan segera dengan unit sekelas.",
   },
   {
+    question: "Apakah ada biaya tambahan untuk pemakaian luar kota?",
+    answer:
+      "Ya, pemakaian luar kota dikenakan biaya tambahan sebesar Rp50.000.",
+  },
+  {
     question: "Apakah saya bisa memesan jangka panjang?",
     answer:
       "Bisa. Kami menyediakan sewa jangka pendek (harian/mingguan) dan sewa jangka panjang (minimal 1 bulan).",

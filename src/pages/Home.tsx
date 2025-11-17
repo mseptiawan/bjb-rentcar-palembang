@@ -19,12 +19,12 @@ export default function Home() {
         <h2 className="font-outfit text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3 tracking-wider uppercase">
           Pilihan Armada Kami
         </h2>
-        <p className="text-center font-inter font-medium text-gray-700 uppercase leading-relaxed mb-20">
+        <p className="text-center font-inter font-medium text-gray-700 uppercase leading-relaxed mb-10">
           Rental Mobil Palembang Matic / Manual, Include Supir, BBM dan Lepas
           Kunci 2025
         </p>
 
-        <div className="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 px-3">
           {featuredCars.map((car) => (
             <CarCard key={car.id} car={car} />
           ))}
