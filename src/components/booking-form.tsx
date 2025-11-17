@@ -83,7 +83,7 @@ const App: React.FC<BookingFormProps> = () => {
     // - 'relative' agar 'absolute' child berfungsi.
     // - 'w-full' agar di mobile dia 100% penuh.
     // - 'min-h-[20vh]' hanya untuk memberi ruang agar tidak 'collapse'.
-    <div className="relative w-full min-h-[20vh]">
+    <div className="relative w-full h-[35rem] sm:h-[22rem] md:h-[12rem] lg:h-[10rem]">
       {/* 2. Kartu Form (Absolute):
         Ini adalah bagian yang diperbaiki.
         - 'absolute z-10': Mengambang di atas.
@@ -107,7 +107,7 @@ const App: React.FC<BookingFormProps> = () => {
           md:left-1/2 md:-translate-x-1/2  /* <- Ini untuk centering Desktop */
           md:w-full md:max-w-5xl          /* <- Ini untuk lebar Desktop */
           
-          bg-white px-10 md:p-10 rounded-xl shadow-none md:shadow-xl  
+          bg-white px-10 md:p-10 rounded-xl shadow-none md:shadow-sm 
         "
       >
         {/* Kontainer Form */}
