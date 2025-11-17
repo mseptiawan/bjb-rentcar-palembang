@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import { format } from "date-fns";
 // Daftar tipe mobil
@@ -39,11 +39,6 @@ const App: React.FC<BookingFormProps> = () => {
   const [error, setError] = useState("");
 
   // Mendapatkan tanggal hari ini (sudah benar)
-  const today = useMemo(() => {
-    const d = new Date();
-    d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
-    return d.toISOString().split("T")[0];
-  }, []);
 
   // Handler (sudah benar)
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
