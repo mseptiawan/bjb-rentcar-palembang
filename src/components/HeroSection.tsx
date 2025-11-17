@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
             className="inline-block  text-yellow-500 text-xs font-semibold 
                            px-3 py-1 rounded-full uppercase tracking-wider "
           >
-            CAR RENTAL
+            RENTAL MOBIL
           </span>
 
           {/* Judul Utama (Headline) */}

@@ -88,7 +88,7 @@ const Whyuseus: React.FC = () => {
         <div className="container mx-auto max-w-6xl px-4">
           {/* PERBAIKAN: Layout diubah. Judul dipusatkan. */}
           <div className="text-center">
-            <span className="inline-block text-yellow-500 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+            <span className="inline-block text-yellow-500 text-lg font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
               MENGAPA KAMI?
             </span>
             <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">

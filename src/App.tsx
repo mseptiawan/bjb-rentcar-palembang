@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import AboutUsPage from "./pages/AboutUsPage";
 import VisiMisi from "./pages/VisiMisi";
 import Cars from "./pages/Cars";
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ export default function App() {
       <main className="  ">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<AboutUsPage />} />
           <Route path="/visi-misi" element={<VisiMisi />} />
           <Route path="/cars" element={<Cars />} />
           <Route path="/contact" element={<ContactPage />} />
