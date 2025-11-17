@@ -59,7 +59,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   // Lebar sekarang diatur oleh grid di parent.
   <div className="bg-white p-8 rounded-lg shadow-sm h-full flex flex-col">
     {/* Icon */}
-    <div className="flex-shrink-0">
+    <div className="flex-shrink-0 mx-auto">
       <span className="inline-flex items-center justify-center h-20 w-20 rounded-xl ">
         {/* PERBAIKAN: {icon} diganti dengan <img> */}
         <img src={icon} alt={title} className="h-20 w-20  object-contain" />
@@ -67,8 +67,10 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
     </div>
     {/* Konten Teks */}
     <div className="mt-6">
-      <h3 className="text-xl font-bold text-gray-900">{title}</h3>
-      <p className="mt-2 font-inter text-gray-600 text-justify">
+      <h3 className="text-sm md:text-xl font-bold text-center text-gray-900">
+        {title}
+      </h3>
+      <p className="mt-2 font-inter text-gray-600 text-justify hidden md:block">
         {description}
       </p>
     </div>
@@ -82,7 +84,7 @@ const Whyuseus: React.FC = () => {
   return (
     <>
       {/* PERBAIKAN: <style> untuk scrollbar dihapus */}
-      <section className="bg-gray-50 w-full py-16 md:py-24 ">
+      <section className="bg-gray-50 w-full py-16  md:py-24 ">
         <div className="container mx-auto max-w-6xl px-4">
           {/* PERBAIKAN: Layout diubah. Judul dipusatkan. */}
           <div className="text-center">

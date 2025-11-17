@@ -4,3 +4,28 @@
   --font-inter: "Inter", sans-serif;
   --font-outfit: "Outfit", sans-serif;
 }
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+         focus:outline-none focus:ring-yellow-500 focus:border-yellow-500;
+}
+
+.react-datepicker {
+  font-size: 0.9rem;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: #fef9c3; /* kuning soft */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #facc15 !important;
+  color: black !important;
+}

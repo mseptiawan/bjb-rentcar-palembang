@@ -2,10 +2,16 @@
 import React from "react";
 
 const HeroSection: React.FC = () => {
+  const WHATSAPP_NUMBER = "62895604964463";
+  const DEFAULT_MESSAGE = `Halo BJB RENTAL MOBIL PALEMBANG, saya ingin bertanya tentang ketersediaan mobil rental. Bisa dibantu?`;
+  const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    DEFAULT_MESSAGE
+  )}`;
+
   return (
     // Kontainer utama dengan posisi relative untuk menampung elemen absolut
     // dan overflow-hidden untuk memotong lingkaran latar belakang
-    <div className="relative w-full pt-10 bg-gradient-to-b from-white to-gray-100   py-20 md:py-30 md:pt-2 overflow-hidden font-outfit ">
+    <div className="relative w-full pt-1 bg-gradient-to-b from-white to-gray-100   py-20 md:py-30 md:pt-10 overflow-hidden font-outfit ">
       {/* 1. Elemen Latar Belakang (Lingkaran Putih) */}
       <div
         className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 
@@ -27,24 +33,26 @@ const HeroSection: React.FC = () => {
           </span>
 
           {/* Judul Utama (Headline) */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 my-1 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 my-1 leading-tight mb-8">
             Temukan Mobil Impian dengan Harga Terjangkau
           </h1>
 
           {/* Paragraf Deskripsi */}
-          <p className="text-gray-600 text-lg mb-4">
+          <p className="text-gray-600 text-justify text-lg mb-8">
             Nikmati perjalanan nyaman dan menyenangkan tanpa menguras budget.
             Kami menyediakan berbagai pilihan mobil rental dengan kualitas
             terbaik, harga bersahabat, dan proses mudah untuk kebutuhan harian
             maupun perjalanan luar kota.
           </p>
           {/* Tombol CTA */}
-          <button
-            className="bg-yellow-500 text-white font-bold py-3 px-8 rounded-xl
-                           shadow-lg hover:bg-yellow-300 transition duration-300"
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-500 text-white font-bold py-3  px-8 rounded-md shadow-lg hover:bg-yellow-300 transition duration-300"
           >
             Hubungi Kami
-          </button>
+          </a>
         </div>
 
         {/* Kolom Kanan: Gambar Mobil */}

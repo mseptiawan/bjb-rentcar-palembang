@@ -103,7 +103,11 @@ const IconX = () => (
 
 // --- KONSTANTA ---
 const WHATSAPP_NUMBER = "62895604964463";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+const DEFAULT_MESSAGE = `Halo BJB Rentcar Palembang, saya ingin bertanya tentang ketersediaan mobil rental. Bisa dibantu?`;
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  DEFAULT_MESSAGE
+)}`;
+
 const PHONE_NUMBER = "0895604964463";
 const PHONE_LINK = `tel:${PHONE_NUMBER}`;
 
@@ -170,7 +174,7 @@ export default function NavbarLayout() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg text-sm hover:bg-yellow-600"
+            className="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-sm text-sm hover:bg-yellow-600"
           >
             Hubungi Kami
           </a>

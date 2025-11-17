@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
-
+import DatePicker from "react-datepicker";
+import { format } from "date-fns";
 // Daftar tipe mobil
 const carTypes = [
   "Avanza New",
@@ -30,8 +31,9 @@ interface BookingFormProps {}
 const App: React.FC<BookingFormProps> = () => {
   // State untuk setiap input form
   const [name, setName] = useState("");
-  const [pickupDate, setPickupDate] = useState("");
-  const [dropoffDate, setDropoffDate] = useState("");
+  const [pickupDate, setPickupDate] = useState<Date | null>(null);
+  const [dropoffDate, setDropoffDate] = useState<Date | null>(null);
+
   const [carType, setCarType] = useState(carTypes[0]);
   const [service, setService] = useState(serviceOptions[0]);
   const [error, setError] = useState("");
@@ -44,15 +46,6 @@ const App: React.FC<BookingFormProps> = () => {
   }, []);
 
   // Handler (sudah benar)
-  const handlePickupDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newPickupDate = e.target.value;
-    setPickupDate(newPickupDate);
-    if (dropoffDate && newPickupDate > dropoffDate) {
-      setDropoffDate("");
-    }
-  };
-
-  // Handler (sudah benar)
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
@@ -62,15 +55,18 @@ const App: React.FC<BookingFormProps> = () => {
       return;
     }
 
+    const formattedPickup = pickupDate ? format(pickupDate, "d MMMM yyyy") : "";
+    const formattedDropoff = dropoffDate
+      ? format(dropoffDate, "d MMMM yyyy")
+      : "";
+
     const phoneNumber = "62895604964463";
-    const messageLines = [
-      "Hallo PT. TPM RENT CAR",
-      `Nama: ${name}`,
-      `Mulai Rental: ${pickupDate}`,
-      `Selesai Rental: ${dropoffDate}`,
-      `Rental Mobil: ${carType} (${service})`,
-    ];
-    const encodedMessage = encodeURIComponent(messageLines.join("\n"));
+    const message = `Halo BJB RENTAL MOBIL PALEMBANG, saya ${name} ingin melakukan pemesanan mobil. 
+Saya berencana mulai rental pada tanggal ${formattedPickup} dan selesai pada tanggal ${formattedDropoff}. 
+Mobil yang ingin saya pesan adalah ${carType} dengan layanan ${service}. 
+Mohon konfirmasi ketersediaan dan detail selanjutnya. Terima kasih.`;
+
+    const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
     window.open(whatsappURL, "_blank");
   };
@@ -125,26 +121,24 @@ const App: React.FC<BookingFormProps> = () => {
 
             {/* Input Tanggal Pickup */}
             <div className="w-full">
-              <label
-                htmlFor="pickupDate"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Pickup Date <span className="text-red-500">*</span>
               </label>
-              {/* 1. Wrapper relatif untuk menampung icon */}
+
               <div className="relative">
-                <input
-                  type="date"
-                  id="pickupDate"
-                  value={pickupDate}
-                  onChange={handlePickupDateChange}
-                  min={today} // Validasi: Tidak bisa tanggal kemarin
-                  // 2. Tambahkan 'pr-10' (padding kanan) untuk memberi ruang bagi icon
-                  className="block w-full px-3 py-2 pr-10 border border-gray-300 rounded-md shadow-sm 
-                             focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-                  required
+                <DatePicker
+                  selected={pickupDate}
+                  onChange={(date) => {
+                    setPickupDate(date);
+                    setDropoffDate(null);
+                  }}
+                  minDate={new Date()}
+                  dateFormat="yyyy-MM-dd"
+                  placeholderText="Select pickup date"
+                  className="pr-10"
                 />
-                {/* 3. Icon Kalender */}
+
+                {/* Icon */}
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
                     className="h-5 w-5 text-gray-400"
@@ -164,32 +158,28 @@ const App: React.FC<BookingFormProps> = () => {
 
             {/* Input Tanggal Dropoff */}
             <div className="w-full">
-              <label
-                htmlFor="dropoffDate"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Dropoff Date <span className="text-red-500">*</span>
               </label>
-              {/* 1. Wrapper relatif untuk menampung icon */}
+
               <div className="relative">
-                <input
-                  type="date"
-                  id="dropoffDate"
-                  value={dropoffDate}
-                  onChange={(e) => setDropoffDate(e.target.value)}
-                  min={pickupDate || today} // Validasi: Tidak bisa sebelum tanggal pickup
-                  disabled={!pickupDate} // Disable jika tanggal pickup belum dipilih
-                  // 2. Tambahkan 'pr-10' (padding kanan)
-                  className={`block w-full px-3 py-2 pr-10 border border-gray-300 rounded-md shadow-sm 
-                             focus:outline-none focus:ring-yellow-500 focus:border-yellow-500
-                             ${
-                               !pickupDate
-                                 ? "bg-gray-100 cursor-not-allowed"
-                                 : ""
-                             }`}
-                  required
+                <DatePicker
+                  selected={dropoffDate}
+                  onChange={(date) => setDropoffDate(date)}
+                  minDate={pickupDate || new Date()}
+                  disabled={!pickupDate}
+                  dateFormat="yyyy-MM-dd"
+                  placeholderText={
+                    pickupDate
+                      ? "Select dropoff date"
+                      : "Select pickup date first"
+                  }
+                  className={`pr-10 ${
+                    !pickupDate ? "bg-gray-100 cursor-not-allowed" : ""
+                  }`}
                 />
-                {/* 3. Icon Kalender */}
+
+                {/* Icon */}
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <svg
                     className="h-5 w-5 text-gray-400"
