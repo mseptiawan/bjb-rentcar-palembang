@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, MapPin, MessageSquare, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 
 // Data Kontak dan Lokasi (menggunakan koordinat dari Google Maps yang lebih presisi)
 const contactData = {
@@ -12,44 +12,36 @@ const contactData = {
   lng: 104.7298396, // Longitude BJB RENTCAR PALEMBANG
   googleMapsPlaceId: "0x2e3b9f5ccb5ee159:0x524caf4468486d0a", // ID tempat untuk link Google Maps
 };
-
-type IconType = "instagram" | "tiktok" | "email" | "whatsapp";
-
-interface SocialMediaIconProps {
-  type: IconType;
-  link: string;
-  label: string;
-}
+const ContactInfoBox: React.FC<{
+  Icon: React.ElementType;
+  title: string;
+  detail: string;
+  link?: string;
+}> = ({ Icon, title, detail, link }) => (
+  <div className="flex items-start mb-6">
+    <div className="p-3 mr-4 rounded-full bg-yellow-500/10">
+      <Icon className="w-6 h-6 text-yellow-500" />
+    </div>
+    <div>
+      <p className="text-lg font-semibold text-gray-700">{title}</p>
+      {link ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs md:text-lg  text-gray-800 hover:text-yellow-500 transition-colors "
+        >
+          {detail}
+        </a>
+      ) : (
+        <p className="text-sm md:text-lg  text-gray-800">{detail}</p>
+      )}
+    </div>
+  </div>
+);
 
 const ContactPage: React.FC = () => {
   // Komponen pembantu untuk Info Box
-  const ContactInfoBox: React.FC<{
-    Icon: React.ElementType;
-    title: string;
-    detail: string;
-    link?: string;
-  }> = ({ Icon, title, detail, link }) => (
-    <div className="flex items-start mb-6">
-      <div className="p-3 mr-4 rounded-full bg-yellow-500/10">
-        <Icon className="w-6 h-6 text-yellow-500" />
-      </div>
-      <div>
-        <p className="text-lg font-semibold text-gray-700">{title}</p>
-        {link ? (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs md:text-lg  text-gray-800 hover:text-yellow-500 transition-colors "
-          >
-            {detail}
-          </a>
-        ) : (
-          <p className="text-sm md:text-lg  text-gray-800">{detail}</p>
-        )}
-      </div>
-    </div>
-  );
 
   // Link Google Maps untuk HANYA melihat lokasi (place view)
   const googleMapsPlaceLink = `https://www.google.com/maps/search/?api=1&query=${contactData.lat},${contactData.lng}&query_place_id=${contactData.googleMapsPlaceId}`;

@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutUsPage from "./pages/AboutUsPage";
-import VisiMisi from "./pages/VisiMisi";
 import Cars from "./pages/Cars";
 import Footer from "./components/Footer";
 import SocialMediaBar from "./components/SocialMediaBar";
@@ -17,7 +16,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/visi-misi" element={<VisiMisi />} />
           <Route path="/cars" element={<Cars />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
