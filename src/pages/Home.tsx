@@ -1,8 +1,10 @@
 import App from "../components/booking-form";
 import Faq from "../components/faq";
 import FeaturedClients from "../components/FeaturedClients";
+import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import HeroSection from "../components/HeroSection";
+import SocialMediaBar from "../components/SocialMediaBar";
 import Whyuseus from "../components/why-use-us";
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
       <Whyuseus />
       <Faq />
       <Gallery />
+      <SocialMediaBar />
+      <Footer />
     </div>
   );
 }
