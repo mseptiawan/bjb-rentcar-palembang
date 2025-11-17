@@ -1,5 +1,5 @@
 import App from "../components/booking-form";
-import Faq from "../components/faq";
+import Faq from "../components/Faq";
 import FeaturedClients from "../components/FeaturedClients";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
