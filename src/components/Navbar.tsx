@@ -174,7 +174,7 @@ export default function Navbar() {
       {/* Karena navbar atas fixed, kita butuh spacer setinggi navbar (h-16).
         Karena navbar bawah fixed, kita BUTUH SPACER TAMBAHAN di mobile.
       */}
-      <div className="pt-16 md:pt-16 pb-16 md:pb-0">
+      <div className="pt-16 md:pt-16 pb-10 md:pb-16">
         {/* Konten halaman Anda akan muncul di sini (melalui <Outlet /> di App.tsx) */}
       </div>
     </>

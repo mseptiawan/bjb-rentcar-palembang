@@ -134,7 +134,7 @@ export default function CarCard({ car }: { car: CarData }) {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-xl text-sm font-semibold transition duration-200 shadow-md"
+            className="flex items-center justify-center w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-xl text-sm font-semibold transition duration-200 shadow-md "
           >
             BOOKING SEKARANG
             <svg

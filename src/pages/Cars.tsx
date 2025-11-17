@@ -42,14 +42,14 @@ export default function Cars() {
 
   return (
     <div className="font-outfit max-w-6xl mx-auto">
-      <h1 className="text-3xl text-center  py-10 font-semibold text-gray-900 mb-6">
+      <h1 className="text-3xl text-center  py-2  font-semibold text-gray-900 mb-2">
         Pilihan Armada di BJB Rentcar Palembang
       </h1>
 
       {/* 7. Ubah grid ini agar lebih pas (2 di HP, 3 di Desktop) 
            dan petakan (map) `paginatedCars`, BUKAN `cars`
       */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 min-[450px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 p-4">
         {paginatedCars.map((car) => (
           <CarCard key={car.id} car={car} />
         ))}
@@ -58,7 +58,10 @@ export default function Cars() {
       {/* --- 8. KOMPONEN PAGINASI BARU --- */}
       {/* Tampilkan navigasi hanya jika total halaman lebih dari 1 */}
       {totalPages > 1 && (
-        <nav aria-label="Page navigation" className="flex justify-center my-10">
+        <nav
+          aria-label="Page navigation"
+          className="flex justify-center mt-10 mb-30 md:my-10 "
+        >
           <ul className="flex -space-x-px text-sm">
             <li>
               <button

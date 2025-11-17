@@ -21,7 +21,7 @@ const cars: CarData[] = [
   {
     id: 1,
     name: "Avanza New",
-    image: "/src/assets/images/avanza-new.png",
+    image: "/avanza-new.png",
     price: "Rp 450.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -32,7 +32,7 @@ const cars: CarData[] = [
   {
     id: 2,
     name: "Innova Reborn",
-    image: "/src/assets/images/innova-reborn.png",
+    image: "/innova-reborn.png",
     price: "Rp 700.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -43,7 +43,7 @@ const cars: CarData[] = [
   {
     id: 3,
     name: "Innova Zenix G Hybrid",
-    image: "/src/assets/images/innova-zenix-g.png",
+    image: "/innova-zenix-g.png",
     price: "Rp 850.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -54,7 +54,7 @@ const cars: CarData[] = [
   {
     id: 4,
     name: "Pajero",
-    image: "/src/assets/images/pajero.png",
+    image: "/pajero.png",
     price: "Rp 1.200.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -65,7 +65,7 @@ const cars: CarData[] = [
   {
     id: 5,
     name: "Fortuner",
-    image: "/src/assets/images/fortuner.png",
+    image: "/fortuner.png",
     price: "Rp 1.300.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -76,7 +76,7 @@ const cars: CarData[] = [
   {
     id: 6,
     name: "Brio",
-    image: "/src/assets/images/brio.png",
+    image: "/brio.png",
     price: "Rp 350.000 / hari",
     seat: 5,
     transmission: "AT",
@@ -87,7 +87,7 @@ const cars: CarData[] = [
   {
     id: 7,
     name: "Alphard Gen 3",
-    image: "/src/assets/images/alphard-gen-3.png",
+    image: "/alphard-gen-3.png",
     price: "Rp 2.000.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -98,7 +98,7 @@ const cars: CarData[] = [
   {
     id: 8,
     name: "Hiace Commuter",
-    image: "/src/assets/images/hiace-commuter.png",
+    image: "/hiace-commuter.png",
     price: "Rp 1.000.000 / hari",
     seat: 15,
     transmission: "MT",
@@ -109,7 +109,7 @@ const cars: CarData[] = [
   {
     id: 9,
     name: "Hiace Premio",
-    image: "/src/assets/images/hiace-premio.png",
+    image: "/hiace-premio.png",
     price: "Rp 1.300.000 / hari",
     seat: 12,
     transmission: "AT",
@@ -120,7 +120,7 @@ const cars: CarData[] = [
   {
     id: 10,
     name: "Hilux",
-    image: "/src/assets/images/hilux.png",
+    image: "/hilux.png",
     price: "Rp 700.000 / hari",
     seat: 5,
     transmission: "MT",
@@ -131,7 +131,7 @@ const cars: CarData[] = [
   {
     id: 11,
     name: "Triton",
-    image: "/src/assets/images/triton.png",
+    image: "/triton.png",
     price: "Rp 1.100.000 / hari",
     seat: 5,
     transmission: "MT",
@@ -142,7 +142,7 @@ const cars: CarData[] = [
   {
     id: 12,
     name: "Alphard Gen 4",
-    image: "/src/assets/images/alphard-gen-4.png",
+    image: "/alphard-gen-4.png",
     price: "Rp 2.500.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -153,7 +153,7 @@ const cars: CarData[] = [
   {
     id: 13,
     name: "Pajero-44",
-    image: "/src/assets/images/pajero-44.png",
+    image: "/pajero-44.png",
     price: "Rp 1.350.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -164,7 +164,7 @@ const cars: CarData[] = [
   {
     id: 14,
     name: "Land Cruiser",
-    image: "/src/assets/images/land-cruiser.png",
+    image: "/land-cruiser.png",
     price: "Rp 2.200.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -175,7 +175,7 @@ const cars: CarData[] = [
   {
     id: 15,
     name: "Innova Zenix Q Modelista",
-    image: "/src/assets/images/innova-zenix-q-modelista.png",
+    image: "/innova-zenix-q-modelista.png",
     price: "Rp 900.000 / hari",
     seat: 7,
     transmission: "AT",
@@ -186,7 +186,7 @@ const cars: CarData[] = [
   {
     id: 16,
     name: "Calya",
-    image: "/src/assets/images/calya.png",
+    image: "/calya.png",
     price: "Rp 400.000 / hari",
     seat: 5,
     transmission: "AT",
