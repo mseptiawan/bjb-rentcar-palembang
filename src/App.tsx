@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import VisiMisi from "./pages/VisiMisi";
 import Cars from "./pages/Cars";
+import Footer from "./components/Footer";
+import SocialMediaBar from "./components/SocialMediaBar";
+import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
@@ -16,8 +19,11 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/visi-misi" element={<VisiMisi />} />
           <Route path="/cars" element={<Cars />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
+      <SocialMediaBar />
+      <Footer />
     </div>
   );
 }

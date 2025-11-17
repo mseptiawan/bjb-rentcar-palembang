@@ -64,12 +64,12 @@ const faqData: FaqItem[] = [
       "Bisa. Kami menyediakan sewa jangka pendek (harian/mingguan) dan sewa jangka panjang (minimal 1 bulan).",
   },
   {
-    question: "Apakah driver BJB RentCar berpengalaman?",
+    question: "Apakah driver BJB Rental Mobil berpengalaman?",
     answer:
       "Driver kami terlatih, ramah, sopan, dan menguasai rute tujuan, memastikan perjalanan aman dan nyaman.",
   },
   {
-    question: "Apakah BJB RentCar melayani perusahaan besar?",
+    question: "Apakah BJB Rental Mobil Palembang melayani perusahaan besar?",
     answer:
       "Ya. Kami telah bekerja sama dengan lebih dari 1000 perusahaan, termasuk kementerian, BUMN, dan swasta.",
   },

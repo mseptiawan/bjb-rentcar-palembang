@@ -103,7 +103,7 @@ const IconX = () => (
 
 // --- KONSTANTA ---
 const WHATSAPP_NUMBER = "62895604964463";
-const DEFAULT_MESSAGE = `Halo BJB Rentcar Palembang, saya ingin bertanya tentang ketersediaan mobil rental. Bisa dibantu?`;
+const DEFAULT_MESSAGE = `Halo BJB Rental Mobil Palembang, saya ingin bertanya tentang ketersediaan mobil rental. Bisa dibantu?`;
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   DEFAULT_MESSAGE
 )}`;

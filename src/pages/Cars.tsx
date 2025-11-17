@@ -42,8 +42,8 @@ export default function Cars() {
 
   return (
     <div className="font-outfit max-w-6xl mx-auto">
-      <h1 className="text-3xl text-center  py-2  font-semibold text-gray-900 mb-2">
-        Pilihan Armada di BJB Rentcar Palembang
+      <h1 className="text-3xl text-center   pb-10 md:py-10  font-semibold text-gray-900 ">
+        Pilihan Armada di BJB Rental Mobil Palembang
       </h1>
 
       {/* 7. Ubah grid ini agar lebih pas (2 di HP, 3 di Desktop) 

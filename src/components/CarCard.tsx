@@ -79,7 +79,7 @@ const WHATSAPP_API_URL = "https://wa.me/";
 
 export default function CarCard({ car }: { car: CarData }) {
   // Pesan otomatis yang akan dikirim via WhatsApp
-  const whatsappMessage = `Halo BJB Rentcar, saya mau sewa mobil ${car.name} (${car.year} | ${car.transmission}). Mohon info ketersediaan dan syarat penyewaan.`;
+  const whatsappMessage = `Halo BJB Rental Mobil Palembang, saya mau sewa mobil ${car.name} (${car.year} | ${car.transmission}). Mohon info ketersediaan dan syarat penyewaan.`;
 
   // URL WhatsApp yang di-encode
   const whatsappLink = `${WHATSAPP_API_URL}${WHATSAPP_NUMBER}?text=${encodeURIComponent(

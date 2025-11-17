@@ -36,18 +36,18 @@ const SocialMediaBar: React.FC = () => {
     <div className="bg-yellow-500 w-full font-sans ">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
         {/* Kiri: Logo & Slogan */}
-        <div className="flex items-center space-x-4 h-full">
-          <div className="">
+        <div className=" flex items-center space-x-4 h-full">
+          <div className="hidden md:block">
             <img
               src={LOGO_PATH}
-              alt="Logo BJB RentCar Palembang"
+              alt="Logo BJB Rental Mobil Palembang"
               className="w-18 sm:w-16 object-contain rounded-full"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).style.opacity = "0";
               }}
             />
           </div>
-          <div className="h-full border-l border-white border-opacity-50 mx-4"></div>
+          <div className="hidden md:block h-full border-l border-white border-opacity-50 mx-4"></div>
           <h1 className="text-sm  sm:text-2xl text-white font-semibold tracking-wide ml-4">
             Butuh Mobil Cepat? BJB Solusinya
           </h1>

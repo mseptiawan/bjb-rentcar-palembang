@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Konten Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 md:pb-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Kolom 1: Logo & Deskripsi */}
           <div className="md:col-span-1 space-y-4">
@@ -119,13 +119,15 @@ const Footer: React.FC = () => {
                 }}
               />
             </div>
-            <p className="text-white text-xl">Nomor Rekening: 6175222336</p>
-            <p className="text-white text-xl">Atas Nama: Hendy</p>
+            <p className="text-white text-sm md:text-xl">
+              Nomor Rekening: 6175222336
+            </p>
+            <p className="text-white text-sm md:text-xl">Atas Nama: Hendy</p>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-xl">
+        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-sm md:text-xl py-4">
           © {new Date().getFullYear()} BJB Rental Mobil Palembang. All rights
           reserved.
         </div>

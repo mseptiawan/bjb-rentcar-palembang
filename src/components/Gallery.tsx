@@ -29,7 +29,7 @@ const GalleryImage: React.FC<GalleryImageProps> = ({ src }) => (
       // Styling Masonry: w-full dan h-auto untuk tinggi gambar asli
       className="w-full h-auto max-w-full rounded-lg object-cover"
       src={src}
-      alt="Galeri BJB RentCar Palembang"
+      alt="Galeri BJB Rental Mobil Palembang"
       loading="lazy"
       onError={(e) => {
         (e.currentTarget as HTMLImageElement).style.display = "none";
