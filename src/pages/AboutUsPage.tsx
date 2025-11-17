@@ -49,6 +49,9 @@ const AboutUsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Judul Halaman */}
         <div className="text-center mb-12">
+          <h2 className="text-xl font-bold tracking-wider text-gray-600 uppercase">
+            TENTANG KAMI
+          </h2>
           <h2 className="text-3xl md:text-5xl font-semibold text-black mt-2">
             Komitmen Kami dalam Transportasi
           </h2>

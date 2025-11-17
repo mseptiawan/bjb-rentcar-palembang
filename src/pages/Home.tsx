@@ -30,7 +30,7 @@ export default function Home() {
           ))}
         </div>
         {/* Link ke halaman Cars lengkap */}
-        <div className="max-w-4xl mx-auto bg-yellow-500 rounded-xl  p-4 flex flex-col md:flex-row items-center justify-between gap-4 ">
+        <div className="max-w-4xl mx-auto bg-yellow-500 md:rounded-xl  p-4 flex flex-col md:flex-row items-center justify-between gap-4 ">
           {/* Kiri: teks */}
           <div className="text-center md:text-left flex-1">
             <h3 className="text-xl  font-sans  text-white mb-2">

@@ -68,7 +68,7 @@ const ContactPage: React.FC = () => {
             <h3 className="mb-4 text-2xl font-bold text-gray-800">
               Lokasi Kami
             </h3>
-            <div className="overflow-hidden rounded-xl shadow-xl  relative">
+            <div className="overflow-hidden rounded-xl -xl  relative">
               {/* Google Maps Iframe */}
               <iframe
                 src={mapEmbedUrl}
@@ -82,7 +82,7 @@ const ContactPage: React.FC = () => {
               ></iframe>
 
               {/* Card Info Bisnis (menggantikan Tooltip yang bermasalah) */}
-              <div className="absolute top-4 left-4 bg-white p-4 rounded-xl shadow-2xl  w-64 text-center z-10">
+              <div className="absolute top-4 left-4 bg-white p-4 rounded-xl -2xl  w-64 text-center z-10">
                 <h4 className="text-yellow-600 font-extrabold text-xl">
                   BJB RentCar Palembang
                 </h4>
@@ -95,7 +95,7 @@ const ContactPage: React.FC = () => {
                     href={`https://wa.me/${contactData.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center bg-yellow-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-semibold transition shadow-md"
+                    className="flex items-center bg-yellow-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-semibold transition -md"
                   >
                     <MessageSquare className="w-4 h-4 mr-1" /> Chat WA
                   </a>
@@ -104,7 +104,7 @@ const ContactPage: React.FC = () => {
                     href={googleMapsPlaceLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center bg-yellow-500  text-white px-3 py-2 rounded-lg text-sm font-semibold transition shadow-md"
+                    className="flex items-center bg-yellow-500  text-white px-3 py-2 rounded-lg text-sm font-semibold transition -md"
                   >
                     <MapPin className="w-4 h-4 mr-1" /> Titik Lokasi
                   </a>
@@ -114,7 +114,7 @@ const ContactPage: React.FC = () => {
           </div>
 
           {/* Kolom Kanan: Informasi Kontak & Sosial Media */}
-          <div className="p-8 bg-gray-50 rounded-xl shadow-2xl lg:order-2 h-fit">
+          <div className="p-8 bg-gray-50 rounded-xl -2xl lg:order-2 h-fit">
             <h3 className="mb-8 text-3xl font-bold text-gray-800 border-b-4 border-yellow-500 pb-3">
               Informasi Kontak
             </h3>

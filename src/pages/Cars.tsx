@@ -42,7 +42,10 @@ export default function Cars() {
 
   return (
     <div className="font-outfit max-w-6xl mx-auto">
-      <h1 className="text-3xl text-center   pb-10 md:py-10  font-semibold text-gray-900 ">
+      <h2 className="text-center text-xl font-bold px-3  md:pt-10 md:-mb-10 tracking-wider text-gray-600 uppercase">
+        DAFTAR MOBIL
+      </h2>
+      <h1 className="text-3xl text-center   px-3 pb-10 md:py-10  font-semibold text-gray-900 ">
         Pilihan Armada di BJB Rental Mobil Palembang
       </h1>
 

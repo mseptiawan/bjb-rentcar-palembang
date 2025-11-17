@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
 
 // --- IKON-IKON ---
@@ -122,7 +122,20 @@ export default function NavbarLayout() {
     { name: "Tentang Kami", path: "/about" },
     { name: "Kontak", path: "/contact" },
   ];
+  useEffect(() => {
+    if (isSidebarOpen) {
+      // Nonaktifkan scroll body
+      document.body.style.overflow = "hidden";
+    } else {
+      // Aktifkan kembali scroll
+      document.body.style.overflow = "auto";
+    }
 
+    // Cleanup jika komponen di-unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isSidebarOpen]);
   return (
     <>
       {/* CSS Transition */}
@@ -211,8 +224,11 @@ export default function NavbarLayout() {
             <Link
               key={link.name}
               to={link.path}
-              onClick={() => setIsSidebarOpen(false)}
-              className={`p-4 border-b border-gray-200  tracking-wide hover:bg-gray-100 hover:text-yellow-600 ${
+              onClick={() => {
+                setIsSidebarOpen(false);
+                window.scrollTo({ top: 0, behavior: "smooth" }); // scroll ke atas
+              }}
+              className={`p-4 border-b border-gray-200 tracking-wide hover:bg-gray-100 hover:text-yellow-600 ${
                 location.pathname === link.path ? "text-yellow-600" : ""
               }`}
             >
