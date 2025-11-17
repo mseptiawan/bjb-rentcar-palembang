@@ -1,5 +1,5 @@
 import React from "react";
-import { DollarSign, Users, Car, CheckCircle, Calendar } from "lucide-react"; // <-- Calendar ditambahkan di sini
+import { Users, Car, CheckCircle, Calendar } from "lucide-react"; // <-- Calendar ditambahkan di sini
 
 // Data Visi Misi
 const VISI_MISI = {

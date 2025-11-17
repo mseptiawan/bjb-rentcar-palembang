@@ -1,13 +1,5 @@
 import React from "react";
-// Menghapus import react-leaflet dan leaflet yang menyebabkan error.
-import {
-  Phone,
-  Mail,
-  MapPin,
-  MessageSquare,
-  Ticket,
-  Instagram,
-} from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare, Instagram } from "lucide-react";
 
 // Data Kontak dan Lokasi (menggunakan koordinat dari Google Maps yang lebih presisi)
 const contactData = {
@@ -21,38 +13,6 @@ const contactData = {
   googleMapsPlaceId: "0x2e3b9f5ccb5ee159:0x524caf4468486d0a", // ID tempat untuk link Google Maps
 };
 
-// Data Media Sosial
-const socialMediaData = [
-  {
-    type: "whatsapp" as const,
-    label: "WhatsApp",
-    link: `https://wa.me/${contactData.whatsapp}`,
-    info: contactData.whatsapp,
-  },
-  {
-    type: "instagram" as const,
-    label: "Instagram",
-    link: "https://www.instagram.com/rentcar_palembang/",
-    info: "rentcar_palembang",
-  },
-  {
-    type: "tiktok" as const,
-    label: "TikTok",
-    link: "https://www.tiktok.com/@BJB_RENTCAR_PALEMBANG",
-    info: "BJB RENTCAR PALEMBANG",
-  },
-  {
-    type: "email" as const,
-    label: "Email",
-    link: `mailto:${contactData.email}`,
-    info: contactData.email,
-  },
-];
-
-// -------------------------------------------------------------
-// 1. KOMPONEN PEMBANTU: SocialMediaIcon
-// -------------------------------------------------------------
-
 type IconType = "instagram" | "tiktok" | "email" | "whatsapp";
 
 interface SocialMediaIconProps {
@@ -60,45 +20,6 @@ interface SocialMediaIconProps {
   link: string;
   label: string;
 }
-
-const getIcon = (type: IconType) => {
-  const iconClass =
-    "w-6 h-6 text-yellow-500 transition-colors duration-300 hover:text-yellow-700";
-  switch (type) {
-    case "instagram":
-      return <Instagram className={iconClass} />;
-    case "tiktok":
-      return <Ticket className={iconClass} />; // Menggunakan ikon 'Ticket'
-    case "email":
-      return <Mail className={iconClass} />;
-    case "whatsapp":
-      return <MessageSquare className={iconClass} />;
-    default:
-      return null;
-  }
-};
-
-const SocialMediaIcon: React.FC<SocialMediaIconProps> = ({
-  type,
-  link,
-  label,
-}) => {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300"
-    >
-      {getIcon(type)}
-    </a>
-  );
-};
-
-// -------------------------------------------------------------
-// 2. KOMPONEN UTAMA
-// -------------------------------------------------------------
 
 const ContactPage: React.FC = () => {
   // Komponen pembantu untuk Info Box
