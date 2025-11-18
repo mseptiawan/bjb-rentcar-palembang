@@ -111,34 +111,53 @@ export default function CarCard({ car }: { car: CarData }) {
         </p>
 
         {/* Harga */}
-        <div className="mt-2 grid grid-cols-2 gap-2 text-xs font-semibold">
-          {car.pricekey && (
+        <div className="mt-2 text-xs font-semibold">
+          {/* --- Jika ada ALL IN, tampilkan 1 card saja --- */}
+          {car.priceAllIn ? (
             <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
               <p className="text-[10px] text-gray-500">
-                Lepas Kunci Dalam Kota
+                ALL IN (Mobil + Driver + BBM)
               </p>
-              <span>{car.pricekey}</span>
+              <span>{car.priceAllIn}</span>
             </div>
-          )}
+          ) : (
+            /* --- Jika TIDAK ada ALL IN → tampilkan 4 card 2 kolom --- */
+            <div className="grid grid-cols-2 gap-2">
+              {car.pricekey && (
+                <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+                  <p className="text-[10px] text-gray-500">
+                    Lepas Kunci Dalam Kota
+                  </p>
+                  <span>{car.pricekey}</span>
+                </div>
+              )}
 
-          {car.priceWithDriver && (
-            <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
-              <p className="text-[10px] text-gray-500">Driver Dalam Kota</p>
-              <span>{car.priceWithDriver}</span>
-            </div>
-          )}
+              {car.priceWithDriver && (
+                <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+                  <p className="text-[10px] text-gray-500">
+                    Mobil + Driver Dalam Kota
+                  </p>
+                  <span>{car.priceWithDriver}</span>
+                </div>
+              )}
 
-          {car.priceLuarKota && (
-            <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
-              <p className="text-[10px] text-gray-500">Luar Kota Lepas Kota</p>
-              <span>{car.priceLuarKota}</span>
-            </div>
-          )}
+              {car.priceLuarKota && (
+                <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+                  <p className="text-[10px] text-gray-500">
+                    Lepas Kunci Luar Kota
+                  </p>
+                  <span>{car.priceLuarKota}</span>
+                </div>
+              )}
 
-          {car.priceLuarKotaWithDriver && (
-            <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
-              <p className="text-[10px] text-gray-500">Luar Kota + Driver</p>
-              <span>{car.priceLuarKotaWithDriver}</span>
+              {car.priceLuarKotaWithDriver && (
+                <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+                  <p className="text-[10px] text-gray-500">
+                    Mobil + Driver Luar Kota
+                  </p>
+                  <span>{car.priceLuarKotaWithDriver}</span>
+                </div>
+              )}
             </div>
           )}
         </div>

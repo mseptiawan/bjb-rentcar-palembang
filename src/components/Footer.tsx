@@ -2,6 +2,7 @@ import React from "react";
 
 const CAR_BACKGROUND_IMAGE = "/car-bg.webp";
 const BCA_LOGO_IMAGE = "/BCA.png";
+const MANDIRI_LOGO_IMAGE = "/MANDIRI.png";
 
 const Footer: React.FC = () => {
   return (
@@ -129,10 +130,26 @@ const Footer: React.FC = () => {
                 }}
               />
             </div>
-            <p className="text-white font-inter  text-sm md:text-lg">
+            <p className="text-white font-inter  text-sm md:text-sm">
               Nomor Rekening: 6175222336
             </p>
-            <p className="text-white font-inter text-sm md:text-lg">
+            <p className="text-white font-inter text-sm md:text-sm">
+              Atas Nama: Hendy
+            </p>
+            <div className="flex items-center space-x-3">
+              <img
+                src={MANDIRI_LOGO_IMAGE}
+                alt="Logo MANDIRI"
+                className="h-10 w-auto rounded-sm"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                }}
+              />
+            </div>
+            <p className="text-white font-inter  text-sm md:text-sm">
+              Nomor Rekening:1130014018075
+            </p>
+            <p className="text-white font-inter text-sm md:text-sm">
               Atas Nama: Hendy
             </p>
           </div>

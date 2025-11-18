@@ -3,8 +3,9 @@ export interface CarData {
   name: string;
   image: string;
   pricekey?: string | null;
-  priceWithDriver: string;
+  priceWithDriver?: string;
   priceLuarKota?: string;
+  priceAllIn?: string;
   priceLuarKotaWithDriver?: string;
   seat: number;
   transmission: "AT" | "MT";
@@ -121,10 +122,10 @@ const cars: CarData[] = [
     id: 16,
     name: "Innova Zenix Q Modelista",
     image: "/innova-zenix-q-modelista.png",
-    pricekey: "Rp 650.000",
-    priceWithDriver: "Rp 800.000",
-    priceLuarKota: "Rp 700.000",
-    priceLuarKotaWithDriver: add200k("Rp 700.000"),
+    pricekey: "Rp 1.000.000",
+    priceWithDriver: "Rp 1.150.000",
+    priceLuarKota: "Rp 1.100.000",
+    priceLuarKotaWithDriver: add200k("Rp 1.100.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
@@ -146,7 +147,6 @@ const cars: CarData[] = [
     year: 2023,
     category: "Hatchback",
   },
-
   {
     id: 11,
     name: "Hilux DC 4X4",
@@ -205,28 +205,22 @@ const cars: CarData[] = [
     year: 2023,
     category: "SUV",
   },
-
   {
     id: 13,
     name: "Alphard Gen 4",
     image: "/alphard-gen-4.png",
-    pricekey: null,
-    priceWithDriver: "Rp 4.000.000",
-    priceLuarKotaWithDriver: add200k("Rp 4.200.000"),
+    priceAllIn: "Rp 4.000.000",
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Include Driver", "Sunroof"],
     year: 2024,
     category: "Luxury",
   },
-
   {
     id: 8,
     name: "Alphard Gen 3",
     image: "/alphard-gen-3.png",
-    pricekey: null,
-    priceWithDriver: "Rp 3.000.000",
-    priceLuarKotaWithDriver: add200k("Rp 3.200.000"),
+    priceAllIn: "Rp 3.000.000",
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Include Driver"],
@@ -240,7 +234,7 @@ const cars: CarData[] = [
     image: "/hiace-commuter.png",
     pricekey: null,
     priceWithDriver: "Rp 1.100.000",
-    priceLuarKotaWithDriver: add200k("Rp 1.300.000"),
+    priceLuarKotaWithDriver: add200k("Rp 1.000.000"),
     seat: 15,
     transmission: "MT",
     features: ["AC dingin", "Include Driver"],
@@ -253,8 +247,8 @@ const cars: CarData[] = [
     name: "Hiace Premio",
     image: "/hiace-premio.png",
     pricekey: null,
-    priceWithDriver: "Rp 1.500.000",
-    priceLuarKotaWithDriver: add200k("Rp 1.700.000"),
+    priceWithDriver: "Rp 1.300.000",
+    priceLuarKotaWithDriver: add200k("Rp 1.300.000"),
     seat: 12,
     transmission: "AT",
     features: ["AC dingin", "Include Driver"],

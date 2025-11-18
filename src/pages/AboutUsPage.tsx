@@ -18,7 +18,7 @@ const VISI_MISI = {
 // Data Statistik Usaha
 const STATS = [
   { title: "Pengalaman", value: "10", unit: "Tahun", Icon: Calendar },
-  { title: "Perusahaan Klien", value: "41", unit: "Perusahaan", Icon: Users },
+  { title: "Perusahaan Klien", value: "100+", unit: "Perusahaan", Icon: Users },
   { title: "Total Unit", value: "50+", unit: "Mobil", Icon: Car },
   { title: "Klien Puas", value: "100+", unit: "Klien", Icon: CheckCircle },
 ];

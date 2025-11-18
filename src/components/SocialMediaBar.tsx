@@ -4,7 +4,7 @@ import { FiMail } from "react-icons/fi";
 
 // Data Media Sosial
 const socialLinks = {
-  tiktok: "BJBRENTCARPALEMBANG",
+  tiktok: "cv_bukitjayabersama",
   instagram: "https://www.instagram.com/rentcar_palembang/",
   email: "mailto:CV.BUKITJAYABERSAMA@GMAIL.COM",
   whatsapp: "https://wa.me/62895604964463",

@@ -163,7 +163,7 @@ export default function NavbarLayout() {
               <img
                 src="/logorentcar.png"
                 alt="BJB Logo"
-                className="w-16 h-16 rounded-full"
+                className="w-14 h-14 rounded-full"
               />
             </Link>
 
@@ -201,7 +201,7 @@ export default function NavbarLayout() {
           <Link to="/" onClick={() => setIsSidebarOpen(false)}>
             <img
               src="/logorentcar.png"
-              className="w-52 h-52 object-contain rounded-full"
+              className="w-48 h-48 object-contain rounded-full"
             />
           </Link>
 

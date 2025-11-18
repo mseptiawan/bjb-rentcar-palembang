@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 
 // Data Kontak dan Lokasi (menggunakan koordinat dari Google Maps yang lebih presisi)
 const contactData = {
-  phone: "0895604964463",
+  phone: "081273576534",
   whatsapp: "0895604964463",
   email: "CV.BUKITJAYABERSAMA@GMAIL.COM",
   address:

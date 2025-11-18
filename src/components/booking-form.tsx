@@ -130,7 +130,7 @@ Mohon konfirmasi ketersediaan dan detail selanjutnya. Terima kasih.`;
                   minDate={new Date()}
                   dateFormat="yyyy-MM-dd"
                   placeholderText="Select pickup date"
-                  className="pr-10"
+                  className="pr-10 text-sm"
                 />
 
                 {/* Icon */}
@@ -165,12 +165,10 @@ Mohon konfirmasi ketersediaan dan detail selanjutnya. Terima kasih.`;
                   disabled={!pickupDate}
                   dateFormat="yyyy-MM-dd"
                   placeholderText={
-                    pickupDate
-                      ? "Select dropoff date"
-                      : "Select pickup date first"
+                    pickupDate ? "Select dropoff date" : "Pickup date first"
                   }
-                  className={`pr-10 ${
-                    !pickupDate ? "bg-gray-100 cursor-not-allowed" : ""
+                  className={`text-sm pr-10 ${
+                    !pickupDate ? "bg-gray-100 cursor-not-allowed text-sm" : ""
                   }`}
                 />
 
