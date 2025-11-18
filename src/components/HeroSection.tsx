@@ -3,12 +3,6 @@ import React from "react";
 import ContactModal from "./ContactModal";
 
 const HeroSection: React.FC = () => {
-  const WHATSAPP_NUMBER = "62895604964463";
-  const DEFAULT_MESSAGE = `Halo BJB RENTAL MOBIL PALEMBANG, saya ingin bertanya tentang ketersediaan mobil rental. Bisa dibantu?`;
-  const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    DEFAULT_MESSAGE
-  )}`;
-
   return (
     // Kontainer utama dengan posisi relative untuk menampung elemen absolut
     // dan overflow-hidden untuk memotong lingkaran latar belakang
