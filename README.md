@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# 🚗 BJB RENTCAR PALEMBANG Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyek _website_ ini dibuat menggunakan **React + TypeScript + Vite** untuk menyediakan platform _online_ yang informatif dan mudah digunakan bagi pelanggan BJB Rentcar Palembang.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Fitur Utama
 
-## React Compiler
+- **Desain Responsif:** Warna dominan **Kuning** sesuai permintaan.
+- **Halaman Lengkap:** Beranda, Tentang Kami (Visi & Misi), Daftar Armada, Galeri, FAQ, dan Kontak.
+- **Daftar Armada:** Menampilkan detail mobil (tahun, transmisi, kapasitas, kategori) dan tombol _booking_ langsung ke WhatsApp.
+- **Informasi Kontak & Sosial Media:** Terintegrasi dengan Peta (**Leaflet**), No. Telp, WhatsApp, Email, dan Social Media (Instagram, TikTok).
+- **Footer Informatif:** Detail kontak lengkap, alamat kantor, dan informasi rekening bank.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Teknologi
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework:** React
+- **Bahasa:** TypeScript
+- **Build Tool:** Vite
+- **Peta:** Leaflet (untuk menampilkan lokasi kantor)
+- **Hosting:** Vercel (disarankan)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Foto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![Hero Section](readme/hero.PNG)
+![Daftar Armada](readme/booking.PNG)
+![Armada](readme/armada.PNG)
+![Alasan pilih kami](readme/whyuse.PNG)
+![Faq](readme/faq.PNG)
+![Gallery](readme/gallery.PNG)
+![Footer](readme/footer.PNG)
+![Kontak](readme/kontak.PNG)
+![About-1](readme/about1.PNG)
+![About-2](readme/about2.PNG)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
