@@ -18,6 +18,25 @@ const IconYear = () => (
     <line x1="3" y1="10" x2="21" y2="10"></line>
   </svg>
 );
+const IconAC = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-4 h-4 text-gray-500"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    {/* Baling-baling kipas */}
+    <circle cx="12" cy="12" r="2"></circle>
+    <path d="M12 4c1.5 0 3 .8 3 2s-1.5 3-3 3-3-1.4-3-3 1.5-2 3-2z"></path>
+    <path d="M12 20c-1.5 0-3-.8-3-2s1.5-3 3-3 3 1.4 3 3-1.5 2-3 2z"></path>
+    <path d="M4 12c0-1.5.8-3 2-3s3 1.5 3 3-1.4 3-3 3-2-1.5-2-3z"></path>
+    <path d="M20 12c0 1.5-.8 3-2 3s-3-1.5-3-3 1.4-3 3-3 2 1.5 2 3z"></path>
+  </svg>
+);
 
 const IconSeat = () => (
   <svg
@@ -102,20 +121,42 @@ export default function CarCard({ car }: { car: CarData }) {
         <h3 className="font-outfit text-xl font-bold text-gray-900 mt-3">
           {car.name}
         </h3>
-
         {/* Kategori */}
         <p className="font-inter text-sm font-medium text-yellow-500 mt-0.5">
           {car.category}
         </p>
-        <p className="font-inter text-sm font-semibold text-gray-800 mt-1">
-          {car.price.toLocaleString()}
-        </p>
+
+        {/* Harga */}
+        <div className="mt-2 grid grid-cols-3 gap-2 text-xs font-semibold">
+          {car.pricekey && (
+            <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+              <p className="text-[10px] text-gray-500">Lepas Kunci</p>
+              <span>{car.pricekey}</span>
+            </div>
+          )}
+
+          {car.priceWithDriver && (
+            <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+              <p className="text-[10px] text-gray-500">Driver</p>
+              <span>{car.priceWithDriver}</span>
+            </div>
+          )}
+
+          {car.priceLuarKota && (
+            <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+              <p className="text-[10px] text-gray-500">Luar Kota</p>
+              <span>{car.priceLuarKota}</span>
+            </div>
+          )}
+        </div>
+
         <hr className="border-gray-300 my-4 mx-auto " />
         {/* Detail Ikon (Tahun, Seat, Transmisi, Fitur) */}
         <div className="grid grid-cols-2 gap-2 py-4 border-b border-gray-100 mt-2">
           <div className="flex items-center space-x-1.5 text-sm text-gray-700">
-            <IconYear />
-            <span>{car.year}</span>
+            <IconAC />
+            <span>{car.features[0] ? car.features[0] : car.features[1]}</span>
+            {/* <span>{car.year}</span> */}
           </div>
           <div className="flex items-center space-x-1.5 text-sm text-gray-700">
             <IconSeat />
@@ -130,7 +171,6 @@ export default function CarCard({ car }: { car: CarData }) {
             <span>{car.features[1] ? car.features[1] : car.features[0]}</span>
           </div>
         </div>
-
         {/* Tombol Booking */}
         <div className="pt-4">
           <a

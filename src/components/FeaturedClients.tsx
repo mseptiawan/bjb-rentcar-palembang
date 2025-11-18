@@ -104,10 +104,10 @@ const FeaturedClients: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4">
           {/* Judul Section */}
           <h1 className="font-outfit text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3 tracking-wider uppercase">
-            DIPERCAYA 20+ PERUSAHAAN
+            DIPERCAYA 28 PERUSAHAAN
           </h1>
           <p className="text-center font-inter font-medium text-gray-700 uppercase leading-relaxed">
-            LEBIH DARI 20+ PERUSAHAAN DI INDONESIA TELAH MENGGUNAKAN
+            LEBIH DARI 28 PERUSAHAAN DI INDONESIA TELAH MENGGUNAKAN
             <span className="font-bold"> BJB RENTAL MOBIL PALEMBANG</span>{" "}
             SEBAGAI JASA SEWA MOBIL PALEMBANG TERPERCAYA
           </p>

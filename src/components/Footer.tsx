@@ -49,8 +49,9 @@ const Footer: React.FC = () => {
                   />
                 </svg>
                 <div className="space-y-1 font-inter text-base">
-                  <p>
-                    Marcel:{" "}
+                  <p className="flex">
+                    <span className="w-18">Marcel</span>
+                    <span className="mx-2">:</span>
                     <a
                       href="tel:0895604964463"
                       className="hover:text-yellow-400"
@@ -58,31 +59,37 @@ const Footer: React.FC = () => {
                       0895604964463
                     </a>
                   </p>
-                  <p>
-                    Martin:{" "}
+
+                  <p className="flex">
+                    <span className="w-18">Martin</span>
+                    <span className="mx-2">:</span>
                     <a
-                      href="tel:+6289523572666"
+                      href="tel:089523572666"
                       className="hover:text-yellow-400 font-inter"
                     >
-                      +62 895-2357-2666
+                      0895-2357-2666
                     </a>
                   </p>
-                  <p>
-                    Christian:{" "}
+
+                  <p className="flex">
+                    <span className="w-18">Christian</span>
+                    <span className="mx-2">:</span>
                     <a
                       href="tel:08993382548"
                       className="hover:text-yellow-400 font-inter"
                     >
-                      08993382548
+                      0899-3382-548
                     </a>
                   </p>
-                  <p>
-                    Hendy:{" "}
+
+                  <p className="flex">
+                    <span className="w-18">Hendy</span>
+                    <span className="mx-2">:</span>
                     <a
                       href="tel:081273576534"
                       className="hover:text-yellow-400 font-inter"
                     >
-                      081273576534
+                      0812-7357-6534
                     </a>
                   </p>
                 </div>
@@ -100,8 +107,7 @@ const Footer: React.FC = () => {
                   />
                 </svg>
                 <p className="text-base leading-relaxed font-inter">
-                  Jln. Putri Rambut Selako no 1518 rt 016, rw 007, Bukit Lama,
-                  Kec. Ilir Bar. I, Kota Palembang, Sumatera Selatan 30137
+                  Jln. Putri Rambut Selako No 1518 RT 016, RW 007
                 </p>
               </li>
             </ul>
