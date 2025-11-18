@@ -107,6 +107,9 @@ export default function CarCard({ car }: { car: CarData }) {
         <p className="font-inter text-sm font-medium text-yellow-500 mt-0.5">
           {car.category}
         </p>
+        <p className="font-inter text-sm font-semibold text-gray-800 mt-1">
+          {car.price.toLocaleString()}
+        </p>
         <hr className="border-gray-300 my-4 mx-auto " />
         {/* Detail Ikon (Tahun, Seat, Transmisi, Fitur) */}
         <div className="grid grid-cols-2 gap-2 py-4 border-b border-gray-100 mt-2">

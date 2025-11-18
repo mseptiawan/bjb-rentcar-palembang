@@ -48,7 +48,7 @@ const SocialMediaBar: React.FC = () => {
             />
           </div>
           <div className="hidden md:block h-full border-l border-white border-opacity-50 mx-4"></div>
-          <h1 className="text-sm  sm:text-2xl text-white font-semibold tracking-wide ml-4">
+          <h1 className="text-sm font-inter sm:text-2xl text-white font-semibold tracking-wide ml-4">
             Butuh Mobil Cepat? BJB Solusinya
           </h1>
         </div>

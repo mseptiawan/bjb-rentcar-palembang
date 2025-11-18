@@ -38,7 +38,7 @@ const StatCard: React.FC<StatCardProps> = ({ title, value, unit, Icon }) => (
       <p className="text-sm font-semibold uppercase">{title}</p>
     </div>
     <h3 className="text-4xl font-extrabold text-gray-900">{value}</h3>
-    <p className="text-gray-500">{unit}</p>
+    <p className="text-gray-500 font-inter ">{unit}</p>
   </div>
 );
 
@@ -91,14 +91,14 @@ const AboutUsPage: React.FC = () => {
               <h3 className="text-3xl font-bold text-gray-800 mb-4">
                 CV. Bukit Jaya Bersama
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-gray-600 font-inter leading-relaxed mb-4">
                 **BJB RENTCAR PALEMBANG** didirikan pada tahun **2016** dengan
                 visi menjadi penyedia layanan transportasi darat terdepan dan
                 profesional. Kami menyediakan beragam jenis kendaraan sewaan
                 (*Rent Car*) dari berbagai kelas, mulai dari MPV ekonomis hingga
                 unit mewah dan Double Cabin 4x4.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 font-inter  leading-relaxed">
                 Kami berkomitmen untuk selalu menyediakan kendaraan yang
                 **terawat, bersih, dan terbaru**, didukung oleh driver yang
                 terlatih dan berpengalaman dalam menguasai berbagai rute di
@@ -116,13 +116,15 @@ const AboutUsPage: React.FC = () => {
               {/* Visi */}
               <div className="border-l-4 border-yellow-500 pl-4">
                 <h4 className="text-xl font-bold text-gray-800 mb-1">VISI</h4>
-                <p className="text-gray-700 text-sm">{VISI_MISI.VISI}</p>
+                <p className="text-gray-700 font-inter   text-sm">
+                  {VISI_MISI.VISI}
+                </p>
               </div>
 
               {/* Misi */}
               <div className="border-l-4 border-yellow-500 pl-4">
                 <h4 className="text-xl font-bold text-gray-800 mb-1">MISI</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                <ul className="list-disc list-inside  font-inter  space-y-1 text-gray-700 text-sm">
                   {VISI_MISI.MISI.map((m, index) => (
                     <li key={index}>{m}</li>
                   ))}

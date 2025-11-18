@@ -74,7 +74,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-50 w-full min-h-screen py-16 md:py-24 font-sans">
+    <section className="bg-gray-50 w-full  py-16 md:py-24 font-sans ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header: Judul dan Tombol Navigasi */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
@@ -137,7 +137,7 @@ const Gallery: React.FC = () => {
         </div>
 
         {/* Grid Utama: Layout Masonry 4 kolom */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {/* Mapping array 'columns' yang sudah dibagi 4 */}
           {columns.map((columnImages, colIndex) => (
             // Ini adalah <div> kolom (satu dari 4 kolom)

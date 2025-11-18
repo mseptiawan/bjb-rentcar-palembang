@@ -6,10 +6,13 @@ import Cars from "./pages/Cars";
 import Footer from "./components/Footer";
 import SocialMediaBar from "./components/SocialMediaBar";
 import ContactPage from "./pages/ContactPage";
+import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 
 export default function App() {
   return (
     <div className="min-h-screen text-gray-800">
+      <ScrollToTop />
       <Navbar />
 
       <main className="  ">
@@ -22,6 +25,7 @@ export default function App() {
       </main>
       <SocialMediaBar />
       <Footer />
+      <BackToTop />
     </div>
   );
 }

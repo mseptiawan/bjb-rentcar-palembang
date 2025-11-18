@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
             <h3 className="text-3xl font-extrabold text-yellow-400">
               BJB Rental Mobil Palembang
             </h3>
-            <p className="text-base leading-relaxed">
+            <p className="text-base font-inter leading-relaxed">
               Kami menyediakan layanan rental mobil terpercaya di Palembang
               dengan pilihan armada lengkap, terawat, dan driver profesional
               untuk kenyamanan perjalanan Anda.
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <div className="space-y-1 text-base">
+                <div className="space-y-1 font-inter text-base">
                   <p>
                     Marcel:{" "}
                     <a
@@ -62,14 +62,17 @@ const Footer: React.FC = () => {
                     Martin:{" "}
                     <a
                       href="tel:+6289523572666"
-                      className="hover:text-yellow-400"
+                      className="hover:text-yellow-400 font-inter"
                     >
                       +62 895-2357-2666
                     </a>
                   </p>
                   <p>
                     Christian:{" "}
-                    <a href="tel:08993382548" className="hover:text-yellow-400">
+                    <a
+                      href="tel:08993382548"
+                      className="hover:text-yellow-400 font-inter"
+                    >
                       08993382548
                     </a>
                   </p>
@@ -77,7 +80,7 @@ const Footer: React.FC = () => {
                     Hendy:{" "}
                     <a
                       href="tel:081273576534"
-                      className="hover:text-yellow-400"
+                      className="hover:text-yellow-400 font-inter"
                     >
                       081273576534
                     </a>
@@ -96,7 +99,7 @@ const Footer: React.FC = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <p className="text-base leading-relaxed">
+                <p className="text-base leading-relaxed font-inter">
                   Jln. Putri Rambut Selako no 1518 rt 016, rw 007, Bukit Lama,
                   Kec. Ilir Bar. I, Kota Palembang, Sumatera Selatan 30137
                 </p>
@@ -119,15 +122,17 @@ const Footer: React.FC = () => {
                 }}
               />
             </div>
-            <p className="text-white text-sm md:text-xl">
+            <p className="text-white font-inter  text-sm md:text-lg">
               Nomor Rekening: 6175222336
             </p>
-            <p className="text-white text-sm md:text-xl">Atas Nama: Hendy</p>
+            <p className="text-white font-inter text-sm md:text-lg">
+              Atas Nama: Hendy
+            </p>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-sm md:text-lg py-4">
+        <div className="border-t border-gray-700 mt-12 font-inter pt-6 text-center text-gray-400 text-sm md:text-sm py-4">
           © {new Date().getFullYear()} BJB Rental Mobil Palembang. All rights
           reserved.
         </div>

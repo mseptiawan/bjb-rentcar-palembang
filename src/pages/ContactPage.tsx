@@ -29,12 +29,12 @@ const ContactInfoBox: React.FC<{
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs md:text-lg  text-gray-800 hover:text-yellow-500 transition-colors "
+          className="text-xs md:text-lg  font-inter text-gray-800 hover:text-yellow-500 transition-colors "
         >
           {detail}
         </a>
       ) : (
-        <p className="text-sm md:text-lg  text-gray-800">{detail}</p>
+        <p className="text-sm md:text-lg  font-inter text-gray-800">{detail}</p>
       )}
     </div>
   </div>
@@ -114,7 +114,7 @@ const ContactPage: React.FC = () => {
           </div>
 
           {/* Kolom Kanan: Informasi Kontak & Sosial Media */}
-          <div className="p-8 bg-gray-50 rounded-xl -2xl lg:order-2 h-fit">
+          <div className="p-8  shadow-lg rounded-xl -2xl lg:order-2 h-fit">
             <h3 className="mb-8 text-3xl font-bold text-gray-800 border-b-4 border-yellow-500 pb-3">
               Informasi Kontak
             </h3>
