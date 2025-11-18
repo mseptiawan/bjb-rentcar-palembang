@@ -1,5 +1,6 @@
 // src/components/HeroSection.tsx
 import React from "react";
+import ContactModal from "./ContactModal";
 
 const HeroSection: React.FC = () => {
   const WHATSAPP_NUMBER = "62895604964463";
@@ -31,12 +32,10 @@ const HeroSection: React.FC = () => {
           >
             RENTAL MOBIL
           </span>
-
           {/* Judul Utama (Headline) */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 my-1 leading-tight mb-8">
             Temukan Mobil Impian dengan Harga Terjangkau
           </h1>
-
           {/* Paragraf Deskripsi */}
           <p className="text-gray-600 text-justify text-lg mb-8">
             Nikmati perjalanan nyaman dan menyenangkan tanpa menguras budget.
@@ -45,14 +44,7 @@ const HeroSection: React.FC = () => {
             maupun perjalanan luar kota.
           </p>
           {/* Tombol CTA */}
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-yellow-500 text-white font-bold py-3  px-8 rounded-md shadow-lg hover:bg-yellow-300 transition duration-300"
-          >
-            Hubungi Kami
-          </a>
+          <ContactModal />
         </div>
 
         {/* Kolom Kanan: Gambar Mobil */}

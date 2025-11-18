@@ -7,7 +7,7 @@ const contactData = {
   whatsapp: "0895604964463",
   email: "CV.BUKITJAYABERSAMA@GMAIL.COM",
   address:
-    "Jl. Taqwa Mata Merah, Perumahan GHP III Blok D12, Palembang, Sumatera Selatan, 30119",
+    "Jln. Putri Rambut Selako No 1518 RT 016, RW 007, Sumatera Selatan, Kota Palembang ",
   lat: -2.9963271, // Latitude BJB RENTCAR PALEMBANG
   lng: 104.7298396, // Longitude BJB RENTCAR PALEMBANG
   googleMapsPlaceId: "0x2e3b9f5ccb5ee159:0x524caf4468486d0a", // ID tempat untuk link Google Maps

@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                     <span className="w-18">Marcel</span>
                     <span className="mx-2">:</span>
                     <a
-                      href="tel:0895604964463"
+                      href="tel:0895-6049-64463"
                       className="hover:text-yellow-400"
                     >
                       0895604964463
@@ -107,7 +107,8 @@ const Footer: React.FC = () => {
                   />
                 </svg>
                 <p className="text-base leading-relaxed font-inter">
-                  Jln. Putri Rambut Selako No 1518 RT 016, RW 007
+                  Jln. Putri Rambut Selako No 1518 RT 016, RW 007, Sumatera
+                  Selatan, Kota Palembang
                 </p>
               </li>
             </ul>

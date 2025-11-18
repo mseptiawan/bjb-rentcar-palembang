@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
+import ContactModal from "./ContactModal";
 
 // --- IKON-IKON ---
 const IconHome = () => (
@@ -145,7 +146,7 @@ export default function NavbarLayout() {
       `}</style>
 
       {/* NAVBAR ATAS */}
-      <nav className="font-outfit fixed top-0 left-0 w-full bg-white shadow z-50 border-b-2  border-yellow-500">
+      <nav className="font-outfit fixed top-0 left-0 w-full bg-white shadow z-50 border-b-2  border-yellow-500 py-2">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           {/* KIRI: Menu + Logo + Nav */}
           <div className="flex items-center gap-6">
@@ -162,7 +163,7 @@ export default function NavbarLayout() {
               <img
                 src="/logorentcar.png"
                 alt="BJB Logo"
-                className="w-16 h-16"
+                className="w-16 h-16 rounded-full"
               />
             </Link>
 
@@ -181,16 +182,8 @@ export default function NavbarLayout() {
               ))}
             </div>
           </div>
-
           {/* TOMBOL WA */}
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-sm text-sm hover:bg-yellow-600"
-          >
-            Hubungi Kami
-          </a>
+          <ContactModal />
         </div>
       </nav>
 
@@ -206,7 +199,10 @@ export default function NavbarLayout() {
         {/* HEADER SIDEBAR */}
         <div className="relative p-4 border-b border-gray-200 flex items-center justify-center">
           <Link to="/" onClick={() => setIsSidebarOpen(false)}>
-            <img src="/logorentcar.png" className="w-52 h-52 object-contain" />
+            <img
+              src="/logorentcar.png"
+              className="w-52 h-52 object-contain rounded-full"
+            />
           </Link>
 
           {/* TOMBOL X DI POJOK KANAN */}

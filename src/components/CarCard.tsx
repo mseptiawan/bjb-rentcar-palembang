@@ -111,25 +111,34 @@ export default function CarCard({ car }: { car: CarData }) {
         </p>
 
         {/* Harga */}
-        <div className="mt-2 grid grid-cols-3 gap-2 text-xs font-semibold">
+        <div className="mt-2 grid grid-cols-2 gap-2 text-xs font-semibold">
           {car.pricekey && (
             <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
-              <p className="text-[10px] text-gray-500">Lepas Kunci</p>
+              <p className="text-[10px] text-gray-500">
+                Lepas Kunci Dalam Kota
+              </p>
               <span>{car.pricekey}</span>
             </div>
           )}
 
           {car.priceWithDriver && (
             <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
-              <p className="text-[10px] text-gray-500">Driver</p>
+              <p className="text-[10px] text-gray-500">Driver Dalam Kota</p>
               <span>{car.priceWithDriver}</span>
             </div>
           )}
 
           {car.priceLuarKota && (
             <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
-              <p className="text-[10px] text-gray-500">Luar Kota</p>
+              <p className="text-[10px] text-gray-500">Luar Kota Lepas Kota</p>
               <span>{car.priceLuarKota}</span>
+            </div>
+          )}
+
+          {car.priceLuarKotaWithDriver && (
+            <div className="bg-gray-100 text-gray-700 p-2 rounded-lg text-center">
+              <p className="text-[10px] text-gray-500">Luar Kota + Driver</p>
+              <span>{car.priceLuarKotaWithDriver}</span>
             </div>
           )}
         </div>

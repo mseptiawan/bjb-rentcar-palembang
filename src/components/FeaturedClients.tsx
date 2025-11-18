@@ -42,10 +42,28 @@ const clientLogos = [
   { src: "/perusahaan/SERTCO-QUALITY.png", alt: "SERTCO QUALITY" },
   { src: "/perusahaan/SEPCO-III.png", alt: "SEPCO III" },
   { src: "/perusahaan/PU-KOTA.png", alt: "PU KOTA" },
+
+  { src: "/perusahaan/Bank-Indonesia.png", alt: "Bank-Indonesia" },
+  { src: "/perusahaan/Semen-Baturaja.jpg", alt: "Semen-Baturaja" },
+  { src: "/perusahaan/PT-mutu-lestari.png", alt: "pt-mutu-lestari" },
   {
-    src: "/perusahaan/PT-WIJAYA-KARYA-PERSERO.png",
-    alt: "PT Wijaya Karya Persero",
+    src: "/perusahaan/PT-Emneltech-Solusi-Indonesia.png",
+    alt: "PT-Emneltech-Solusi-Indonesia",
   },
+  { src: "/perusahaan/Kemenhumham.png", alt: "Kemenhumham" },
+  {
+    src: "/perusahaan/Kementrian-Pertanianjpg.jpg",
+    alt: "Kementrian-Pertanianjpg",
+  },
+  { src: "/perusahaan/PLN.png", alt: "PLN" },
+  { src: "/perusahaan/PT-AGRINAS.jpg", alt: "PT-AGRINAS" },
+  { src: "/perusahaan/BPK.png", alt: "BPK" },
+  {
+    src: "/perusahaan/Dinas-Kehutanan-PT.Reki.png",
+    alt: "Dinas Kehutanan PT.Reki",
+  },
+  { src: "/perusahaan/Kemendagri.svg", alt: "Kemendagri" },
+  { src: "/perusahaan/Kementrian-ATRBPN.svg", alt: "Kementrian-ATRBPN" },
 ];
 
 /**
@@ -104,10 +122,10 @@ const FeaturedClients: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4">
           {/* Judul Section */}
           <h1 className="font-outfit text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3 tracking-wider uppercase">
-            DIPERCAYA 28 PERUSAHAAN
+            DIPERCAYA 41 PERUSAHAAN
           </h1>
           <p className="text-center font-inter font-medium text-gray-700 uppercase leading-relaxed">
-            LEBIH DARI 28 PERUSAHAAN DI INDONESIA TELAH MENGGUNAKAN
+            LEBIH DARI 41 PERUSAHAAN DI INDONESIA TELAH MENGGUNAKAN
             <span className="font-bold"> BJB RENTAL MOBIL PALEMBANG</span>{" "}
             SEBAGAI JASA SEWA MOBIL PALEMBANG TERPERCAYA
           </p>

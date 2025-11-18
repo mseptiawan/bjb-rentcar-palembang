@@ -82,13 +82,13 @@ Mohon konfirmasi ketersediaan dan detail selanjutnya. Terima kasih.`;
 
       <div
         className="
-          relative z-10
-          w-auto 
-          mx-4 
-          md:mx-auto md:max-w-5xl
-          mt-0 md:-mt-10 lg:-mt-20
-          bg-white p-6 md:p-12 rounded-xl shadow-none md:shadow-lg
-        "
+    relative
+    w-auto 
+    mx-4 
+    md:mx-auto md:max-w-5xl
+    mt-0 md:-mt-10 lg:-mt-20
+    bg-white p-6 md:p-12 rounded-xl shadow-none md:shadow-lg
+  "
       >
         {/* PERBAIKAN: Menambahkan tag <form> yang hilang */}
         <form onSubmit={handleSubmit}>

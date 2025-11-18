@@ -2,9 +2,10 @@ export interface CarData {
   id: number;
   name: string;
   image: string;
-  pricekey?: string | null; // lepas kunci
+  pricekey?: string | null;
   priceWithDriver: string;
   priceLuarKota?: string;
+  priceLuarKotaWithDriver?: string;
   seat: number;
   transmission: "AT" | "MT";
   features: string[];
@@ -19,6 +20,14 @@ export interface CarData {
     | "Luxury";
 }
 
+// Helper tambah 200.000
+const add200k = (value?: string) => {
+  if (!value) return undefined;
+  const clean = parseInt(value.replace(/[^0-9]/g, ""));
+  const newValue = clean + 200000;
+  return "Rp " + newValue.toLocaleString("id-ID");
+};
+
 const cars: CarData[] = [
   {
     id: 1,
@@ -27,12 +36,14 @@ const cars: CarData[] = [
     pricekey: "Rp 350.000",
     priceWithDriver: "Rp 500.000",
     priceLuarKota: "Rp 400.000",
+    priceLuarKotaWithDriver: add200k("Rp 400.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2023,
     category: "MPV",
   },
+
   {
     id: 2,
     name: "Innova Reborn",
@@ -40,12 +51,14 @@ const cars: CarData[] = [
     pricekey: "Rp 550.000",
     priceWithDriver: "Rp 700.000",
     priceLuarKota: "Rp 600.000",
+    priceLuarKotaWithDriver: add200k("Rp 600.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2023,
     category: "MPV",
   },
+
   {
     id: 4,
     name: "Innova Zenix G Hybrid",
@@ -53,12 +66,14 @@ const cars: CarData[] = [
     pricekey: "Rp 650.000",
     priceWithDriver: "Rp 800.000",
     priceLuarKota: "Rp 700.000",
+    priceLuarKotaWithDriver: add200k("Rp 700.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2023,
     category: "MPV",
   },
+
   {
     id: 5,
     name: "Pajero Dakar",
@@ -66,12 +81,14 @@ const cars: CarData[] = [
     pricekey: "Rp 1.000.000",
     priceWithDriver: "Rp 1.150.000",
     priceLuarKota: "Rp 1.100.000",
+    priceLuarKotaWithDriver: add200k("Rp 1.100.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2022,
     category: "SUV",
   },
+
   {
     id: 6,
     name: "Fortuner",
@@ -79,12 +96,14 @@ const cars: CarData[] = [
     pricekey: "Rp 1.000.000",
     priceWithDriver: "Rp 1.150.000",
     priceLuarKota: "Rp 1.100.000",
+    priceLuarKotaWithDriver: add200k("Rp 1.100.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2022,
     category: "SUV",
   },
+
   {
     id: 7,
     name: "Brio",
@@ -97,6 +116,7 @@ const cars: CarData[] = [
     year: 2023,
     category: "Hatchback",
   },
+
   {
     id: 16,
     name: "Innova Zenix Q Modelista",
@@ -104,12 +124,14 @@ const cars: CarData[] = [
     pricekey: "Rp 650.000",
     priceWithDriver: "Rp 800.000",
     priceLuarKota: "Rp 700.000",
+    priceLuarKotaWithDriver: add200k("Rp 700.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2023,
     category: "MPV",
   },
+
   {
     id: 17,
     name: "Calya",
@@ -117,6 +139,7 @@ const cars: CarData[] = [
     pricekey: "Rp 300.000",
     priceWithDriver: "Rp 450.000",
     priceLuarKota: "Rp 350.000",
+    priceLuarKotaWithDriver: add200k("Rp 350.000"),
     seat: 5,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
@@ -131,12 +154,14 @@ const cars: CarData[] = [
     pricekey: "Rp 800.000",
     priceWithDriver: "Rp 950.000",
     priceLuarKota: "Rp 900.000",
+    priceLuarKotaWithDriver: add200k("Rp 900.000"),
     seat: 5,
     transmission: "MT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2022,
     category: "Pickup",
   },
+
   {
     id: 12,
     name: "Triton DC 4X4",
@@ -144,6 +169,7 @@ const cars: CarData[] = [
     pricekey: "Rp 800.000",
     priceWithDriver: "Rp 950.000",
     priceLuarKota: "Rp 900.000",
+    priceLuarKotaWithDriver: add200k("Rp 900.000"),
     seat: 5,
     transmission: "MT",
     features: ["AC dingin", "Lepas kunci / Driver"],
@@ -158,18 +184,21 @@ const cars: CarData[] = [
     pricekey: "Rp 900.000",
     priceWithDriver: "Rp 1.050.000",
     priceLuarKota: "Rp 1.000.000",
+    priceLuarKotaWithDriver: add200k("Rp 1.000.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Lepas kunci / Driver"],
     year: 2023,
     category: "SUV",
   },
+
   {
     id: 15,
     name: "Land Cruiser",
     image: "/land-cruiser.png",
     pricekey: null,
-    priceWithDriver: "Rp 1.800.000",
+    priceWithDriver: "Rp 18.000.000",
+    priceLuarKotaWithDriver: add200k("Rp 18.200.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Include Driver", "4WD"],
@@ -182,43 +211,50 @@ const cars: CarData[] = [
     name: "Alphard Gen 4",
     image: "/alphard-gen-4.png",
     pricekey: null,
-    priceWithDriver: "Rp 2.500.000",
+    priceWithDriver: "Rp 4.000.000",
+    priceLuarKotaWithDriver: add200k("Rp 4.200.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Include Driver", "Sunroof"],
     year: 2024,
     category: "Luxury",
   },
+
   {
     id: 8,
     name: "Alphard Gen 3",
     image: "/alphard-gen-3.png",
     pricekey: null,
     priceWithDriver: "Rp 3.000.000",
+    priceLuarKotaWithDriver: add200k("Rp 3.200.000"),
     seat: 7,
     transmission: "AT",
     features: ["AC dingin", "Include Driver"],
     year: 2023,
     category: "Luxury",
   },
+
   {
     id: 9,
     name: "Hiace Commuter",
     image: "/hiace-commuter.png",
     pricekey: null,
     priceWithDriver: "Rp 1.100.000",
+    priceLuarKotaWithDriver: add200k("Rp 1.300.000"),
     seat: 15,
     transmission: "MT",
     features: ["AC dingin", "Include Driver"],
     year: 2022,
     category: "Minibus",
   },
+
   {
     id: 10,
     name: "Hiace Premio",
     image: "/hiace-premio.png",
     pricekey: null,
     priceWithDriver: "Rp 1.500.000",
+    priceLuarKotaWithDriver: add200k("Rp 1.700.000"),
     seat: 12,
     transmission: "AT",
     features: ["AC dingin", "Include Driver"],
