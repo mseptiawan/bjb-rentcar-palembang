@@ -1,9 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logorentcar.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logorentcar.png" />
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>
+      Rental Mobil Palembang | Sewa Harian & Lepas Kunci - BJB Rent Car
+    </title>
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="BJB Rental Mobil Palembang menyediakan layanan sewa mobil harian, mingguan, dengan sopir atau lepas kunci. Harga terjangkau, armada lengkap, aman dan terpercaya."
+    />
+
+    <!-- Keywords (Tidak wajib tapi masih berguna) -->
+    <meta
+      name="keywords"
+      content="rental mobil palembang, sewa mobil palembang, rental mobil lepas kunci palembang, harga sewa mobil palembang, bjb rent car palembang"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="BJB Rent Car Palembang" />
+
+    <!-- Open Graph (Share WA, FB, IG) -->
+    <meta property="og:title" content="BJB Rental Mobil Palembang" />
+    <meta
+      property="og:description"
+      content="Sewa mobil Palembang dengan sopir & lepas kunci. Armada lengkap dan harga terjangkau."
+    />
+    <meta
+      property="og:image"
+      content="https://bjbrentalmobilpalembang.com/preview.jpg"
+    />
+    <meta property="og:url" content="https://bjbrentalmobilpalembang.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BJB Rental Mobil Palembang" />
+    <meta
+      name="twitter:description"
+      content="Layanan sewa mobil Palembang harian dan lepas kunci. Armada terawat & harga terbaik."
+    />
+    <meta
+      name="twitter:image"
+      content="https://bjbrentalmobilpalembang.com/preview.jpg"
+    />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,8 +66,26 @@
       rel="stylesheet"
     />
 
-    <title>bjb-rental-mobil-palembang</title>
+    <!-- Schema Markup (SEO Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CarRental",
+        "name": "BJB Rental Mobil Palembang",
+        "image": "https://bjbrentalmobilpalembang.com/preview.jpg",
+        "url": "https://bjbrentalmobilpalembang.com",
+        "telephone": "+62895xxxxxxx",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Palembang",
+          "addressCountry": "ID"
+        },
+        "description": "Layanan sewa mobil Palembang dengan sopir atau lepas kunci. Armada terawat & harga terjangkau.",
+        "priceRange": "Rp300.000 - Rp700.000"
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

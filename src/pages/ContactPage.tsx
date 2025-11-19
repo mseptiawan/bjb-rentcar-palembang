@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 // Data Kontak dan Lokasi (menggunakan koordinat dari Google Maps yang lebih presisi)
 const contactData = {
   phone: "081273576534",
-  whatsapp: "0895604964463",
+  whatsapp: "62895604964463",
   email: "CV.BUKITJAYABERSAMA@GMAIL.COM",
   address:
     "Jln. Putri Rambut Selako No 1518 RT 016, RW 007, Sumatera Selatan, Kota Palembang ",

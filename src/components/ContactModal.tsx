@@ -30,7 +30,7 @@ export default function ContactModal() {
       {/* BUTTON HUBUNGI KAMI */}
       <button
         onClick={() => setOpen(true)}
-        className="bg-yellow-500 text-white font-bold py-3 px-8 rounded-md shadow-lg hover:bg-yellow-300 transition duration-300"
+        className="bg-yellow-500 text-white font-semibold py-2 px-8 rounded-md shadow-lg hover:bg-yellow-300 transition duration-300"
       >
         Hubungi Kami
       </button>

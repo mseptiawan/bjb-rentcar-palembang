@@ -146,7 +146,7 @@ export default function NavbarLayout() {
       `}</style>
 
       {/* NAVBAR ATAS */}
-      <nav className="font-outfit fixed top-0 left-0 w-full bg-white shadow z-50 border-b-2  border-yellow-500 py-2">
+      <nav className="font-outfit fixed top-0 left-0 w-full bg-white shadow z-50 border-b-2  border-yellow-500 py-1">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           {/* KIRI: Menu + Logo + Nav */}
           <div className="flex items-center gap-6">
@@ -163,7 +163,7 @@ export default function NavbarLayout() {
               <img
                 src="/logorentcar.png"
                 alt="BJB Logo"
-                className="w-14 h-14 rounded-full"
+                className="w-12 h-12 rounded-full"
               />
             </Link>
 

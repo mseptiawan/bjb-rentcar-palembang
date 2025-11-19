@@ -79,10 +79,9 @@ const LogoItem: React.FC<LogoItemProps> = ({ src, alt }) => (
   <div className="flex-shrink-0 w-40 mx-4 flex items-center justify-center">
     <img
       src={src}
-      alt={alt}
+      alt={`Mitra: ${alt} – Klien BJB Rental Mobil Palembang`}
       className="h-16 md:h-16 object-contain cursor-pointer"
       onError={(e) => {
-        // Fallback jika gambar gagal dimuat
         (e.target as HTMLImageElement).src =
           "https://placehold.co/150x50/gray/white?text=Logo+Error";
       }}
@@ -121,9 +120,9 @@ const FeaturedClients: React.FC = () => {
       <div className="bg-white w-full  py-16 md:py-20 ">
         <div className="max-w-6xl mx-auto px-4">
           {/* Judul Section */}
-          <h1 className="font-outfit text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3 tracking-wider uppercase">
-            DIPERCAYA 100++ PERUSAHAAN
-          </h1>
+          <h2 className="font-outfit text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3 tracking-wider uppercase">
+            DIPERCAYA 100+ PERUSAHAAN BESAR DI INDONESIA
+          </h2>
           <p className="text-center font-inter font-medium text-gray-700 uppercase leading-relaxed">
             LEBIH DARI 100++ PERUSAHAAN DI INDONESIA TELAH MENGGUNAKAN
             <span className="font-bold"> BJB RENTAL MOBIL PALEMBANG</span>{" "}
@@ -134,7 +133,10 @@ const FeaturedClients: React.FC = () => {
             - 'overflow-hidden': Menyembunyikan logo di luar area.
             - 'group': Untuk me-manage 'hover' (jika ingin pause on hover).
           */}
-          <div className="relative w-full overflow-hidden mt-10">
+          <div
+            className="relative w-full overflow-hidden mt-10"
+            aria-label="Daftar perusahaan klien BJB Rental Mobil Palembang"
+          >
             {/* Track Animasi:
               - 'flex w-max': Membuat semua item jadi satu baris panjang.
               - 'animate-scroll': Menerapkan keyframes 'scroll'.
@@ -168,6 +170,28 @@ const FeaturedClients: React.FC = () => {
           {/* End of viewport */}
         </div>
       </div>
+      <script type="application/ld+json">
+        {`
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Daftar Perusahaan Klien BJB Rental Mobil Palembang",
+  "description": "Lebih dari 100 perusahaan nasional dan instansi pemerintahan menggunakan layanan BJB Rental Mobil Palembang.",
+  "itemListElement": [
+    ${clientLogos
+      .map((logo, i) => {
+        return `{
+          "@type": "Organization",
+          "position": ${i + 1},
+          "name": "${logo.alt}",
+          "url": "https://bjbrentalmobilpalembang.com"
+        }`;
+      })
+      .join(",")}
+  ]
+}
+`}
+      </script>
     </>
   );
 };
