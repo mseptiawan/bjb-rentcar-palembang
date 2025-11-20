@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
           </span>
           {/* Judul Utama (Headline) */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 my-1 leading-tight mb-8">
-            Mobil Impian dengan Harga Terjangkau
+            Temukan Mobil Impian dengan Harga Terjangkau
           </h1>
           {/* Paragraf Deskripsi */}
           <p className="text-gray-600 text-justify text-lg mb-8">
