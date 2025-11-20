@@ -20,9 +20,9 @@ export default function App() {
       <main className="  ">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/cars" element={<Cars />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/tentang-kami" element={<AboutUsPage />} />
+          <Route path="/armada" element={<Cars />} />
+          <Route path="/kontak" element={<ContactPage />} />
         </Routes>
       </main>
       <SocialMediaBar />

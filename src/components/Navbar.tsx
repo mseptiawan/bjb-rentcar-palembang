@@ -119,9 +119,9 @@ export default function NavbarLayout() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Daftar Mobil", path: "/cars" },
-    { name: "Tentang Kami", path: "/about" },
-    { name: "Kontak", path: "/contact" },
+    { name: "Daftar Mobil", path: "/armada" },
+    { name: "Tentang Kami", path: "/tentang-kami" },
+    { name: "Kontak", path: "/kontak" },
   ];
   useEffect(() => {
     if (isSidebarOpen) {
@@ -248,7 +248,7 @@ export default function NavbarLayout() {
           </Link>
 
           <Link
-            to="/cars"
+            to="/armada"
             className={`flex flex-col items-center ${
               location.pathname === "/cars"
                 ? "text-yellow-500"
