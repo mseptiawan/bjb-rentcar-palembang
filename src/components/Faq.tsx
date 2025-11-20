@@ -18,7 +18,7 @@ const faqData: FaqItem[] = [
   {
     question: "Apakah semua mobil bisa disewa lepas kunci?",
     answer:
-      "Tidak semua. Sebagian mobil premium seperti Alphard Gen 3 & 4, Hiace, dan beberapa unit tertentu wajib menggunakan driver. Mobil standar seperti Avanza, Innova, Pajero, dan Fortuner bisa lepas kunci.",
+      "Tidak semuanya. Sebagian mobil premium seperti Alphard Gen 3 & 4, Hiace, dan beberapa unit tertentu wajib menggunakan driver. Mobil standar seperti Avanza, Innova, Pajero, dan Fortuner bisa lepas kunci.",
   },
   {
     question: "Apa saja syarat dokumen untuk sewa lepas kunci?",
