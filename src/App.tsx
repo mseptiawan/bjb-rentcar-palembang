@@ -8,8 +8,10 @@ import SocialMediaBar from "./components/SocialMediaBar";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
+import { usePageViews } from "./hooks/usePageViews";
 
 export default function App() {
+  usePageViews(); // <-- tracking GA aktif
   return (
     <div className="min-h-screen text-gray-800">
       <ScrollToTop />
