@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutUsPage from "./pages/AboutUsPage";
@@ -19,6 +19,10 @@ export default function App() {
 
       <main className="  ">
         <Routes>
+          <Route
+            path="/robots.xml"
+            element={<Navigate to="/" replace />} // Mengalihkan ke Home (/)
+          />
           <Route path="/" element={<Home />} />
           <Route path="/tentang-kami" element={<AboutUsPage />} />
           <Route path="/armada" element={<Cars />} />
