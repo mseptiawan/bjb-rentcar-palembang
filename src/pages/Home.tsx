@@ -45,7 +45,7 @@ export default function Home() {
           {/* Kanan: button */}
           <div>
             <a
-              href="/cars"
+              href="/armada"
               className="inline-flex items-center bg-white text-black font-semibold px-5 py-3 rounded-lg shadow "
             >
               Selengkapnya
