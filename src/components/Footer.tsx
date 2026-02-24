@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                   </p>
 
                   <p className="flex">
-                    <span className="w-18">Martin</span>
+                    <span className="w-18">BJB</span>
                     <span className="mx-2">:</span>
                     <a
                       href="tel:089523572666"
