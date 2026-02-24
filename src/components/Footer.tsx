@@ -68,31 +68,11 @@ const Footer: React.FC = () => {
                       href="tel:089523572666"
                       className="hover:text-yellow-400 font-inter"
                     >
-                      0895-2357-2666
+                      0812-7172-7150
                     </a>
                   </p>
 
-                  <p className="flex">
-                    <span className="w-18">Christian</span>
-                    <span className="mx-2">:</span>
-                    <a
-                      href="tel:08993382548"
-                      className="hover:text-yellow-400 font-inter"
-                    >
-                      0899-3382-548
-                    </a>
-                  </p>
-
-                  <p className="flex">
-                    <span className="w-18">Hendy</span>
-                    <span className="mx-2">:</span>
-                    <a
-                      href="tel:081273576534"
-                      className="hover:text-yellow-400 font-inter"
-                    >
-                      0812-7357-6534
-                    </a>
-                  </p>
+               
                 </div>
               </li>
               <li className="flex items-start space-x-3">
