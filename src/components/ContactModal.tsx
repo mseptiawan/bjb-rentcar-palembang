@@ -9,10 +9,8 @@ interface AdminContact {
 }
 
 const ADMINS: AdminContact[] = [
-  { name: "Marcel", phone: "62895604964463" },
-  { name: "Martin", phone: "6289523572666" },
-  { name: "Christian", phone: "628993382548" },
-  { name: "Hendy", phone: "6281273576534" },
+  { name: "BJB", phone: "62895604964463" },
+  { name: "Marcel", phone: "  6281271727150" },
 ];
 
 export default function ContactModal() {

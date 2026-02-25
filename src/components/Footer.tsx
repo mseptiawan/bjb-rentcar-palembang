@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
                 </svg>
                 <div className="space-y-1 font-inter text-base">
                   <p className="flex">
-                    <span className="w-18">Marcel</span>
+                    <span className="w-18">BJB</span>
                     <span className="mx-2">:</span>
                     <a
                       href="tel:0895-6049-64463"
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                   </p>
 
                   <p className="flex">
-                    <span className="w-18">BJB</span>
+                    <span className="w-18">Marcel</span>
                     <span className="mx-2">:</span>
                     <a
                       href="tel:089523572666"
