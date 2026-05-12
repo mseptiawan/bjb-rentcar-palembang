@@ -1,10 +1,10 @@
-# 🚗 BJB RENTCAR PALEMBANG Website
+# BJB RENTCAR PALEMBANG Website
 
 Proyek _website_ ini dibuat menggunakan **React + TypeScript + Vite** untuk menyediakan platform _online_ yang informatif dan mudah digunakan bagi pelanggan BJB Rentcar Palembang.
 
 ---
 
-## 🌟 Fitur Utama
+## Fitur Utama
 
 - **Desain Responsif:** Warna dominan **Kuning** sesuai permintaan.
 - **Halaman Lengkap:** Beranda, Tentang Kami (Visi & Misi), Daftar Armada, Galeri, FAQ, dan Kontak.
@@ -14,7 +14,7 @@ Proyek _website_ ini dibuat menggunakan **React + TypeScript + Vite** untuk meny
 
 ---
 
-## 🛠️ Stack Teknologi
+## Stack Teknologi
 
 - **Framework:** React
 - **Bahasa:** TypeScript
@@ -24,7 +24,7 @@ Proyek _website_ ini dibuat menggunakan **React + TypeScript + Vite** untuk meny
 
 ---
 
-## 📁 Foto
+## Foto
 
 ![Hero Section](readme/hero.PNG)
 ![Daftar Armada](readme/booking.PNG)
